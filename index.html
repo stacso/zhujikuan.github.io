@@ -270,7 +270,7 @@
         
           
           <li class="menu-item menu-item-pat乙级">
-    <a href="/PAT-B" rel="section">
+    <a href="/categories/PAT-B" rel="section">
       <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />PAT乙级</a>
   </li>
 
@@ -306,6 +306,175 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://zhujikuan.com/1111111111111111111111111.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="万能的翔王大人">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="zhujikuan's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/1111111111111111111111111.html" itemprop="url">
+                  fedora、centos、rhel安装Adobe Flash Player 28
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-08-23 07:40:13 / Modified: 07:41:15" itemprop="dateCreated datePublished" datetime="2018-08-23T07:40:13+08:00">2018-08-23</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/PAT-B/" itemprop="url" rel="index"><span itemprop="name">PAT-B</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>#切换到root用户</p>
+<p>#添加Adobe Repository</p>
+<h2 id="Adobe-Repository-32-bit-x86"><a href="#Adobe-Repository-32-bit-x86" class="headerlink" title="Adobe Repository 32-bit x86"></a>Adobe Repository 32-bit x86</h2><p>rpm -ivh <a href="http://linuxdownload.adobe.com/adobe-release/adobe-release-i386-1.0-1.noarch.rpm" target="_blank" rel="noopener">http://linuxdownload.adobe.com/adobe-release/adobe-release-i386-1.0-1.noarch.rpm</a><br>rpm –import /etc/pki/rpm-gpg/RPM-GPG-KEY-adobe-linux</p>
+<h2 id="Adobe-Repository-64-bit-x86-64"><a href="#Adobe-Repository-64-bit-x86-64" class="headerlink" title="Adobe Repository 64-bit x86_64"></a>Adobe Repository 64-bit x86_64</h2><p>rpm -ivh <a href="http://linuxdownload.adobe.com/adobe-release/adobe-release-x86_64-1.0-1.noarch.rpm" target="_blank" rel="noopener">http://linuxdownload.adobe.com/adobe-release/adobe-release-x86_64-1.0-1.noarch.rpm</a><br>rpm –import /etc/pki/rpm-gpg/RPM-GPG-KEY-adobe-linux</p>
+<p>#安装Adobe Flash Player 28</p>
+<h1 id="Fedora-27-26-25-24"><a href="#Fedora-27-26-25-24" class="headerlink" title="Fedora 27/26/25/24"></a>Fedora 27/26/25/24</h1><p>dnf install flash-plugin alsa-plugins-pulseaudio libcurl</p>
+<h1 id="Fedora-23-22"><a href="#Fedora-23-22" class="headerlink" title="Fedora 23/22"></a>Fedora 23/22</h1><p>dnf install flash-plugin nspluginwrapper alsa-plugins-pulseaudio libcurl</p>
+<h1 id="CentOS-RHEL-7-4"><a href="#CentOS-RHEL-7-4" class="headerlink" title="CentOS/RHEL 7.4"></a>CentOS/RHEL 7.4</h1><p>yum install flash-plugin alsa-plugins-pulseaudio libcurl</p>
+<h1 id="CentOS-RHEL-6-9"><a href="#CentOS-RHEL-6-9" class="headerlink" title="CentOS/RHEL 6.9"></a>CentOS/RHEL 6.9</h1><p>yum install flash-plugin nspluginwrapper alsa-plugins-pulseaudio libcurl</p>
+<p>#测试下你的flash能否正常使用<br><a href="https://www.adobe.com/software/flash/about/" target="_blank" rel="noopener">Check is Adobe Flash Plugin Working</a></p>
+<hr>
+<p>转载自<a href="https://www.if-not-true-then-false.com/2010/install-adobe-flash-player-10-on-fedora-centos-red-hat-rhel/" target="_blank" rel="noopener">Adobe Flash Player 28 on Fedora 27/26, CentOS/RHEL 7.4/6.9</a></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -684,7 +853,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -699,7 +868,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">1</span>
+                      
+                    
+                    <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">categories</span>
                   </a>
                 </div>
