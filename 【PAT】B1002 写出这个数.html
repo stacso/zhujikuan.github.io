@@ -108,25 +108,25 @@
 
 
 
-  <meta name="description" content="#切换到root用户 #添加Adobe Repository Adobe Repository 32-bit x86rpm -ivh http://linuxdownload.adobe.com/adobe-release/adobe-release-i386-1.0-1.noarch.rpmrpm –import /etc/pki/rpm-gpg/RPM-GPG-KEY-adobe-linux">
-<meta name="keywords" content="Flash Player,">
+  <meta name="description" content="思路：1.以字符串形式输入数据，计算结果2.使用sprintf将结果数字转换为字符串（将数字每一位分开）3.分别输出字符每一位  1，笨方法，用的ifelse来判断输出12345678910111213141516171819202122232425262728293031323334353637383940414243#include&amp;lt;stdio.h&amp;gt;#include&amp;lt;str">
+<meta name="keywords" content="Linux,C语言,PAT">
 <meta property="og:type" content="article">
-<meta property="og:title" content="fedora、centos、rhel安装Adobe Flash Player 28">
-<meta property="og:url" content="http://zhujikuan.com/hello-world.html">
+<meta property="og:title" content="【PAT】B1002 写出这个数">
+<meta property="og:url" content="http://zhujikuan.com/【PAT】B1002 写出这个数.html">
 <meta property="og:site_name" content="zhujikuan&#39;s blog">
-<meta property="og:description" content="#切换到root用户 #添加Adobe Repository Adobe Repository 32-bit x86rpm -ivh http://linuxdownload.adobe.com/adobe-release/adobe-release-i386-1.0-1.noarch.rpmrpm –import /etc/pki/rpm-gpg/RPM-GPG-KEY-adobe-linux">
+<meta property="og:description" content="思路：1.以字符串形式输入数据，计算结果2.使用sprintf将结果数字转换为字符串（将数字每一位分开）3.分别输出字符每一位  1，笨方法，用的ifelse来判断输出12345678910111213141516171819202122232425262728293031323334353637383940414243#include&amp;lt;stdio.h&amp;gt;#include&amp;lt;str">
 <meta property="og:locale" content="zh-CM">
-<meta property="og:updated_time" content="2018-08-22T14:12:46.476Z">
+<meta property="og:updated_time" content="2018-09-03T02:59:05.407Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="fedora、centos、rhel安装Adobe Flash Player 28">
-<meta name="twitter:description" content="#切换到root用户 #添加Adobe Repository Adobe Repository 32-bit x86rpm -ivh http://linuxdownload.adobe.com/adobe-release/adobe-release-i386-1.0-1.noarch.rpmrpm –import /etc/pki/rpm-gpg/RPM-GPG-KEY-adobe-linux">
+<meta name="twitter:title" content="【PAT】B1002 写出这个数">
+<meta name="twitter:description" content="思路：1.以字符串形式输入数据，计算结果2.使用sprintf将结果数字转换为字符串（将数字每一位分开）3.分别输出字符每一位  1，笨方法，用的ifelse来判断输出12345678910111213141516171819202122232425262728293031323334353637383940414243#include&amp;lt;stdio.h&amp;gt;#include&amp;lt;str">
 
 
 
 
 
 
-  <link rel="canonical" href="http://zhujikuan.com/hello-world.html"/>
+  <link rel="canonical" href="http://zhujikuan.com/【PAT】B1002 写出这个数.html"/>
 
 
 
@@ -136,7 +136,7 @@
   };
 </script>
 
-  <title>fedora、centos、rhel安装Adobe Flash Player 28 | zhujikuan's blog</title>
+  <title>【PAT】B1002 写出这个数 | zhujikuan's blog</title>
   
 
 
@@ -317,7 +317,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://zhujikuan.com/hello-world.html">
+    <link itemprop="mainEntityOfPage" href="http://zhujikuan.com/【PAT】B1002 写出这个数.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="万能的翔王大人">
@@ -334,7 +334,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">fedora、centos、rhel安装Adobe Flash Player 28
+          <h1 class="post-title" itemprop="name headline">【PAT】B1002 写出这个数
               
             
           </h1>
@@ -359,7 +359,7 @@
                 
               
 
-              <time title="Created: 2018-08-22 20:25:38 / Modified: 22:12:46" itemprop="dateCreated datePublished" datetime="2018-08-22T20:25:38+08:00">2018-08-22</time>
+              <time title="Created: 2018-09-03 10:47:04 / Modified: 10:59:05" itemprop="dateCreated datePublished" datetime="2018-09-03T10:47:04+08:00">2018-09-03</time>
             
 
             
@@ -381,7 +381,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/PAT-B/" itemprop="url" rel="index"><span itemprop="name">PAT-B</span></a></span>
 
                 
                 
@@ -415,18 +415,11 @@
       
 
       
-        <p>#切换到root用户</p>
-<p>#添加Adobe Repository</p>
-<h2 id="Adobe-Repository-32-bit-x86"><a href="#Adobe-Repository-32-bit-x86" class="headerlink" title="Adobe Repository 32-bit x86"></a>Adobe Repository 32-bit x86</h2><p>rpm -ivh <a href="http://linuxdownload.adobe.com/adobe-release/adobe-release-i386-1.0-1.noarch.rpm" target="_blank" rel="noopener">http://linuxdownload.adobe.com/adobe-release/adobe-release-i386-1.0-1.noarch.rpm</a><br>rpm –import /etc/pki/rpm-gpg/RPM-GPG-KEY-adobe-linux</p>
-<h2 id="Adobe-Repository-64-bit-x86-64"><a href="#Adobe-Repository-64-bit-x86-64" class="headerlink" title="Adobe Repository 64-bit x86_64"></a>Adobe Repository 64-bit x86_64</h2><p>rpm -ivh <a href="http://linuxdownload.adobe.com/adobe-release/adobe-release-x86_64-1.0-1.noarch.rpm" target="_blank" rel="noopener">http://linuxdownload.adobe.com/adobe-release/adobe-release-x86_64-1.0-1.noarch.rpm</a><br>rpm –import /etc/pki/rpm-gpg/RPM-GPG-KEY-adobe-linux</p>
-<p>#安装Adobe Flash Player 28</p>
-<h1 id="Fedora-27-26-25-24"><a href="#Fedora-27-26-25-24" class="headerlink" title="Fedora 27/26/25/24"></a>Fedora 27/26/25/24</h1><p>dnf install flash-plugin alsa-plugins-pulseaudio libcurl</p>
-<h1 id="Fedora-23-22"><a href="#Fedora-23-22" class="headerlink" title="Fedora 23/22"></a>Fedora 23/22</h1><p>dnf install flash-plugin nspluginwrapper alsa-plugins-pulseaudio libcurl</p>
-<h1 id="CentOS-RHEL-7-4"><a href="#CentOS-RHEL-7-4" class="headerlink" title="CentOS/RHEL 7.4"></a>CentOS/RHEL 7.4</h1><p>yum install flash-plugin alsa-plugins-pulseaudio libcurl</p>
-<h1 id="CentOS-RHEL-6-9"><a href="#CentOS-RHEL-6-9" class="headerlink" title="CentOS/RHEL 6.9"></a>CentOS/RHEL 6.9</h1><p>yum install flash-plugin nspluginwrapper alsa-plugins-pulseaudio libcurl</p>
-<p>#测试下你的flash能否正常使用<br><a href="https://www.adobe.com/software/flash/about/" target="_blank" rel="noopener">Check is Adobe Flash Plugin Working</a></p>
-<hr>
-<p>转载自<a href="https://www.if-not-true-then-false.com/2010/install-adobe-flash-player-10-on-fedora-centos-red-hat-rhel/" target="_blank" rel="noopener">Adobe Flash Player 28 on Fedora 27/26, CentOS/RHEL 7.4/6.9</a></p>
+        <blockquote>
+<p>思路：<br><code>1.以字符串形式输入数据，计算结果</code><br><code>2.使用sprintf将结果数字转换为字符串（将数字每一位分开）</code><br><code>3.分别输出字符每一位</code></p>
+</blockquote>
+<p>1，笨方法，用的ifelse来判断输出<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">#include&lt;string.h&gt;</span><br><span class="line">char arr[110];</span><br><span class="line"></span><br><span class="line">int getsum() &#123;</span><br><span class="line">	int sum = 0;</span><br><span class="line">	int len = strlen(arr);</span><br><span class="line">	for (int i = 0; i&lt;len; i++) &#123;</span><br><span class="line">		sum += arr[i] - &apos;0&apos;;</span><br><span class="line">	&#125;</span><br><span class="line">	return sum;</span><br><span class="line">&#125;</span><br><span class="line">int main() &#123;</span><br><span class="line">	scanf(&quot;%s&quot;, arr);</span><br><span class="line">	int sum = getsum();</span><br><span class="line">	sprintf(arr, &quot;%d&quot;, sum);</span><br><span class="line">	int len = strlen(arr);</span><br><span class="line">	for (int i = 0; i&lt;len; i++) &#123;</span><br><span class="line">		if (i != 0) printf(&quot; &quot;);</span><br><span class="line">		if (arr[i] == &apos;1&apos;)</span><br><span class="line">			printf(&quot;yi&quot;);</span><br><span class="line">		else if (arr[i] == &apos;2&apos;)</span><br><span class="line">			printf(&quot;er&quot;);</span><br><span class="line">		else if (arr[i] == &apos;3&apos;)</span><br><span class="line">			printf(&quot;san&quot;);</span><br><span class="line">		else if (arr[i] == &apos;4&apos;)</span><br><span class="line">			printf(&quot;si&quot;);</span><br><span class="line">		else if (arr[i] == &apos;5&apos;)</span><br><span class="line">			printf(&quot;wu&quot;);</span><br><span class="line">		else if (arr[i] == &apos;6&apos;)</span><br><span class="line">			printf(&quot;liu&quot;);</span><br><span class="line">		else if (arr[i] == &apos;7&apos;)</span><br><span class="line">			printf(&quot;qi&quot;);</span><br><span class="line">		else if (arr[i] == &apos;8&apos;)</span><br><span class="line">			printf(&quot;ba&quot;);</span><br><span class="line">		else if (arr[i] == &apos;9&apos;)</span><br><span class="line">			printf(&quot;jiu&quot;);</span><br><span class="line">		else if (arr[i] == &apos;0&apos;)</span><br><span class="line">			printf(&quot;ling&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>2，简化代码，用如下代码简化输出部分的ifelse结构<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">char data[10][20] = &#123; &quot;ling&quot;,&quot;yi&quot;,&quot;er&quot;,&quot;san&quot;,&quot;si&quot;,&quot;wu&quot;,&quot;liu&quot;,&quot;qi&quot;,&quot;ba&quot;,&quot;jiu&quot; &#125;;</span><br><span class="line">printf(&quot;%s&quot;, data[arr[i] - &apos;0&apos;]);</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -445,12 +438,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/Flash-Player/" rel="tag"># Flash Player,</a>
-          
-        </div>
-      
 
       
       
@@ -460,15 +447,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/【PAT】B.html" rel="next" title="【PAT】">
+                <i class="fa fa-chevron-left"></i> 【PAT】
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/fedora、centos、rhel安装Adobe Flash Player 28.html" rel="prev" title="fedora、centos、rhel安装Adobe Flash Player 28">
-                fedora、centos、rhel安装Adobe Flash Player 28 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -513,17 +500,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -596,22 +574,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Adobe-Repository-32-bit-x86"><span class="nav-number">1.</span> <span class="nav-text">Adobe Repository 32-bit x86</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Adobe-Repository-64-bit-x86-64"><span class="nav-number">2.</span> <span class="nav-text">Adobe Repository 64-bit x86_64</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Fedora-27-26-25-24"><span class="nav-number"></span> <span class="nav-text">Fedora 27/26/25/24</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Fedora-23-22"><span class="nav-number"></span> <span class="nav-text">Fedora 23/22</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CentOS-RHEL-7-4"><span class="nav-number"></span> <span class="nav-text">CentOS/RHEL 7.4</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CentOS-RHEL-6-9"><span class="nav-number"></span> <span class="nav-text">CentOS/RHEL 6.9</span></a></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
