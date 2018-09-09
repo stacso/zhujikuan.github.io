@@ -108,25 +108,25 @@
 
 
 
-  <meta name="description" content="在输入时就进行结果的计算，忽略常数项，顺序输出 1234567891011121314151617181920212223#include&amp;lt;cstdio&amp;gt;#include&amp;lt;vector&amp;gt;using namespace std;struct duo&amp;#123;    int xishu,zhishu;&amp;#125;M;int main()&amp;#123;    vector&amp;lt;">
+  <meta name="description" content="简单题 123456789101112131415#include&amp;lt;cstdio&amp;gt;const int CLK_TCK=100;int main()&amp;#123;    int C1,C2;    scanf(&amp;quot;%d%d&amp;quot;,&amp;amp;C1,&amp;amp;C2);    int shi,fen,chamiao=(C2-C1)/100;    shi=chamiao/3600;">
 <meta name="keywords" content="Linux,C语言,PAT">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【PAT】B1010 一元多项式求导">
-<meta property="og:url" content="http://zhujikuan.com/【PAT】B1010 一元多项式求导.html">
+<meta property="og:title" content="【PAT】B1026 程序运行时间">
+<meta property="og:url" content="http://zhujikuan.com/【PAT】B1026 程序运行时间.html">
 <meta property="og:site_name" content="zhujikuan&#39;s blog">
-<meta property="og:description" content="在输入时就进行结果的计算，忽略常数项，顺序输出 1234567891011121314151617181920212223#include&amp;lt;cstdio&amp;gt;#include&amp;lt;vector&amp;gt;using namespace std;struct duo&amp;#123;    int xishu,zhishu;&amp;#125;M;int main()&amp;#123;    vector&amp;lt;">
+<meta property="og:description" content="简单题 123456789101112131415#include&amp;lt;cstdio&amp;gt;const int CLK_TCK=100;int main()&amp;#123;    int C1,C2;    scanf(&amp;quot;%d%d&amp;quot;,&amp;amp;C1,&amp;amp;C2);    int shi,fen,chamiao=(C2-C1)/100;    shi=chamiao/3600;">
 <meta property="og:locale" content="zh-CM">
-<meta property="og:updated_time" content="2018-09-09T10:56:39.636Z">
+<meta property="og:updated_time" content="2018-09-09T13:44:39.675Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【PAT】B1010 一元多项式求导">
-<meta name="twitter:description" content="在输入时就进行结果的计算，忽略常数项，顺序输出 1234567891011121314151617181920212223#include&amp;lt;cstdio&amp;gt;#include&amp;lt;vector&amp;gt;using namespace std;struct duo&amp;#123;    int xishu,zhishu;&amp;#125;M;int main()&amp;#123;    vector&amp;lt;">
+<meta name="twitter:title" content="【PAT】B1026 程序运行时间">
+<meta name="twitter:description" content="简单题 123456789101112131415#include&amp;lt;cstdio&amp;gt;const int CLK_TCK=100;int main()&amp;#123;    int C1,C2;    scanf(&amp;quot;%d%d&amp;quot;,&amp;amp;C1,&amp;amp;C2);    int shi,fen,chamiao=(C2-C1)/100;    shi=chamiao/3600;">
 
 
 
 
 
 
-  <link rel="canonical" href="http://zhujikuan.com/【PAT】B1010 一元多项式求导.html"/>
+  <link rel="canonical" href="http://zhujikuan.com/【PAT】B1026 程序运行时间.html"/>
 
 
 
@@ -136,7 +136,7 @@
   };
 </script>
 
-  <title>【PAT】B1010 一元多项式求导 | zhujikuan's blog</title>
+  <title>【PAT】B1026 程序运行时间 | zhujikuan's blog</title>
   
 
 
@@ -317,7 +317,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://zhujikuan.com/【PAT】B1010 一元多项式求导.html">
+    <link itemprop="mainEntityOfPage" href="http://zhujikuan.com/【PAT】B1026 程序运行时间.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="万能的翔王大人">
@@ -334,7 +334,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">【PAT】B1010 一元多项式求导
+          <h1 class="post-title" itemprop="name headline">【PAT】B1026 程序运行时间
               
             
           </h1>
@@ -359,7 +359,7 @@
                 
               
 
-              <time title="Created: 2018-09-09 16:54:40 / Modified: 18:56:39" itemprop="dateCreated datePublished" datetime="2018-09-09T16:54:40+08:00">2018-09-09</time>
+              <time title="Created: 2018-09-09 21:44:15 / Modified: 21:44:39" itemprop="dateCreated datePublished" datetime="2018-09-09T21:44:15+08:00">2018-09-09</time>
             
 
             
@@ -415,8 +415,8 @@
       
 
       
-        <p>在输入时就进行结果的计算，忽略常数项，<br>顺序输出</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;cstdio&gt;</span><br><span class="line">#include&lt;vector&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">struct duo&#123;</span><br><span class="line">    int xishu,zhishu;</span><br><span class="line">&#125;M;</span><br><span class="line">int main()&#123;</span><br><span class="line">    vector&lt;duo&gt; arr;//结构体向量</span><br><span class="line">    while(scanf(&quot;%d %d&quot;,&amp;M.xishu,&amp;M.zhishu)!=EOF)&#123;</span><br><span class="line">        M.xishu*=M.zhishu;</span><br><span class="line">        M.zhishu--;</span><br><span class="line">        if(M.zhishu&gt;=0)</span><br><span class="line">            arr.push_back(M);</span><br><span class="line">    &#125;</span><br><span class="line">    if(arr.size()==0) printf(&quot;0 0&quot;);//如果结果为0</span><br><span class="line">    else&#123;</span><br><span class="line">        for(int i=0;i&lt;arr.size();i++)&#123;</span><br><span class="line">            if(i!=0)printf(&quot; &quot;);</span><br><span class="line">            printf(&quot;%d %d&quot;,arr[i].xishu,arr[i].zhishu);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <p>简单题</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#include&lt;cstdio&gt;</span><br><span class="line">const int CLK_TCK=100;</span><br><span class="line">int main()&#123;</span><br><span class="line">    int C1,C2;</span><br><span class="line">    scanf(&quot;%d%d&quot;,&amp;C1,&amp;C2);</span><br><span class="line">    int shi,fen,chamiao=(C2-C1)/100;</span><br><span class="line">    shi=chamiao/3600;</span><br><span class="line">    chamiao%=3600;</span><br><span class="line">    fen=chamiao/60;</span><br><span class="line">    chamiao=chamiao%60;</span><br><span class="line">    if((C2-C1)%100&gt;=50)chamiao++;</span><br><span class="line">    printf(&quot;%02d:%02d:%02d&quot;,shi,fen,chamiao);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -443,8 +443,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/【PAT】B1009 说反话.html" rel="next" title="【PAT】B1009 说反话">
-                <i class="fa fa-chevron-left"></i> 【PAT】B1009 说反话
+              <a href="/【PAT】B1023 组个最小数.html" rel="next" title="【PAT】B1023 组个最小数">
+                <i class="fa fa-chevron-left"></i> 【PAT】B1023 组个最小数
               </a>
             
           </div>
@@ -453,8 +453,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/【PAT】B1011 A+B 和 C.html" rel="prev" title="【PAT】B1011 A+B 和 C">
-                【PAT】B1011 A+B 和 C <i class="fa fa-chevron-right"></i>
+              <a href="/【PAT】B1028 人口普查.html" rel="prev" title="【PAT】B1028 人口普查">
+                【PAT】B1028 人口普查 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>

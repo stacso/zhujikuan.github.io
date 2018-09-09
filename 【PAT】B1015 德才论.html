@@ -108,25 +108,25 @@
 
 
 
-  <meta name="description" content="在输入时就进行结果的计算，忽略常数项，顺序输出 1234567891011121314151617181920212223#include&amp;lt;cstdio&amp;gt;#include&amp;lt;vector&amp;gt;using namespace std;struct duo&amp;#123;    int xishu,zhishu;&amp;#125;M;int main()&amp;#123;    vector&amp;lt;">
+  <meta name="description" content="这道题算是挺简单，我在群里看到的别人琢磨好久过不去，大多是因为没有考虑好四种等级的判断条件一定要保证四种判断条件正确。下面这是我的代码，比较笨。后边有别人那学来的聪明些的方法1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950#include&amp;lt;cstdio&amp;gt;">
 <meta name="keywords" content="Linux,C语言,PAT">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【PAT】B1010 一元多项式求导">
-<meta property="og:url" content="http://zhujikuan.com/【PAT】B1010 一元多项式求导.html">
+<meta property="og:title" content="【PAT】B1015 德才论">
+<meta property="og:url" content="http://zhujikuan.com/【PAT】B1015 德才论.html">
 <meta property="og:site_name" content="zhujikuan&#39;s blog">
-<meta property="og:description" content="在输入时就进行结果的计算，忽略常数项，顺序输出 1234567891011121314151617181920212223#include&amp;lt;cstdio&amp;gt;#include&amp;lt;vector&amp;gt;using namespace std;struct duo&amp;#123;    int xishu,zhishu;&amp;#125;M;int main()&amp;#123;    vector&amp;lt;">
+<meta property="og:description" content="这道题算是挺简单，我在群里看到的别人琢磨好久过不去，大多是因为没有考虑好四种等级的判断条件一定要保证四种判断条件正确。下面这是我的代码，比较笨。后边有别人那学来的聪明些的方法1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950#include&amp;lt;cstdio&amp;gt;">
 <meta property="og:locale" content="zh-CM">
-<meta property="og:updated_time" content="2018-09-09T10:56:39.636Z">
+<meta property="og:updated_time" content="2018-09-09T13:23:01.866Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【PAT】B1010 一元多项式求导">
-<meta name="twitter:description" content="在输入时就进行结果的计算，忽略常数项，顺序输出 1234567891011121314151617181920212223#include&amp;lt;cstdio&amp;gt;#include&amp;lt;vector&amp;gt;using namespace std;struct duo&amp;#123;    int xishu,zhishu;&amp;#125;M;int main()&amp;#123;    vector&amp;lt;">
+<meta name="twitter:title" content="【PAT】B1015 德才论">
+<meta name="twitter:description" content="这道题算是挺简单，我在群里看到的别人琢磨好久过不去，大多是因为没有考虑好四种等级的判断条件一定要保证四种判断条件正确。下面这是我的代码，比较笨。后边有别人那学来的聪明些的方法1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950#include&amp;lt;cstdio&amp;gt;">
 
 
 
 
 
 
-  <link rel="canonical" href="http://zhujikuan.com/【PAT】B1010 一元多项式求导.html"/>
+  <link rel="canonical" href="http://zhujikuan.com/【PAT】B1015 德才论.html"/>
 
 
 
@@ -136,7 +136,7 @@
   };
 </script>
 
-  <title>【PAT】B1010 一元多项式求导 | zhujikuan's blog</title>
+  <title>【PAT】B1015 德才论 | zhujikuan's blog</title>
   
 
 
@@ -317,7 +317,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://zhujikuan.com/【PAT】B1010 一元多项式求导.html">
+    <link itemprop="mainEntityOfPage" href="http://zhujikuan.com/【PAT】B1015 德才论.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="万能的翔王大人">
@@ -334,7 +334,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">【PAT】B1010 一元多项式求导
+          <h1 class="post-title" itemprop="name headline">【PAT】B1015 德才论
               
             
           </h1>
@@ -359,7 +359,7 @@
                 
               
 
-              <time title="Created: 2018-09-09 16:54:40 / Modified: 18:56:39" itemprop="dateCreated datePublished" datetime="2018-09-09T16:54:40+08:00">2018-09-09</time>
+              <time title="Created: 2018-09-09 21:16:45 / Modified: 21:23:01" itemprop="dateCreated datePublished" datetime="2018-09-09T21:16:45+08:00">2018-09-09</time>
             
 
             
@@ -415,8 +415,9 @@
       
 
       
-        <p>在输入时就进行结果的计算，忽略常数项，<br>顺序输出</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;cstdio&gt;</span><br><span class="line">#include&lt;vector&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">struct duo&#123;</span><br><span class="line">    int xishu,zhishu;</span><br><span class="line">&#125;M;</span><br><span class="line">int main()&#123;</span><br><span class="line">    vector&lt;duo&gt; arr;//结构体向量</span><br><span class="line">    while(scanf(&quot;%d %d&quot;,&amp;M.xishu,&amp;M.zhishu)!=EOF)&#123;</span><br><span class="line">        M.xishu*=M.zhishu;</span><br><span class="line">        M.zhishu--;</span><br><span class="line">        if(M.zhishu&gt;=0)</span><br><span class="line">            arr.push_back(M);</span><br><span class="line">    &#125;</span><br><span class="line">    if(arr.size()==0) printf(&quot;0 0&quot;);//如果结果为0</span><br><span class="line">    else&#123;</span><br><span class="line">        for(int i=0;i&lt;arr.size();i++)&#123;</span><br><span class="line">            if(i!=0)printf(&quot; &quot;);</span><br><span class="line">            printf(&quot;%d %d&quot;,arr[i].xishu,arr[i].zhishu);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <p>这道题算是挺简单，我在群里看到的别人琢磨好久过不去，大多是因为没有考虑好四种等级的判断条件<br>一定要保证四种判断条件正确。<br>下面这是我的代码，比较笨。后边有别人那学来的聪明些的方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;cstdio&gt;</span><br><span class="line">#include&lt;algorithm&gt;</span><br><span class="line">#include&lt;vector&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">struct student&#123;</span><br><span class="line">    int number,de,cai,sum;</span><br><span class="line">&#125;A[100000],//H（&lt;100为优先录取线——德分和才分均不低于此线的被定义为“才德全尽”，</span><br><span class="line">B[100000],//才分不到但德分到线的一类考生属于“德胜才”，</span><br><span class="line">C[100000],//德才分均低于H，但是德分不低于才分的考生属于“才德兼亡”但尚有“德胜才”者</span><br><span class="line">D[100000];//其他达到最低线L的考生也</span><br><span class="line">int num=0;</span><br><span class="line">bool cmp(student A,student B)&#123;</span><br><span class="line">    if(A.sum!=B.sum) return A.sum&gt;B.sum;</span><br><span class="line">    else if(A.de!=B.de) return A.de&gt;B.de;</span><br><span class="line">    else return A.number&lt;B.number;</span><br><span class="line">&#125;</span><br><span class="line">void prr(student *arr,int Si)&#123;</span><br><span class="line">    for(int i=0;i&lt;Si;i++)&#123;</span><br><span class="line">        printf(&quot;%08d %d %d&quot;,arr[i].number,arr[i].de,arr[i].cai);</span><br><span class="line">        num--;</span><br><span class="line">        if(num!=0)printf(&quot;\n&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">int main()&#123;</span><br><span class="line">    int N,L,H,AA,BB,CC,DD;</span><br><span class="line">    AA=BB=CC=DD=0;</span><br><span class="line">    student temp;</span><br><span class="line">    scanf(&quot;%d%d%d&quot;,&amp;N,&amp;L,&amp;H);</span><br><span class="line">    for(int i=0;i&lt;N;i++)&#123;</span><br><span class="line">        scanf(&quot;%d %d %d&quot;,&amp;temp.number,&amp;temp.de,&amp;temp.cai);</span><br><span class="line">        temp.sum=temp.de+temp.cai;</span><br><span class="line">        if(temp.de&gt;=L&amp;&amp;temp.cai&gt;=L)&#123;</span><br><span class="line">            num++;</span><br><span class="line">            if(temp.cai&gt;=H&amp;&amp;temp.de&gt;=H)&#123;A[AA++]=temp;continue;&#125;</span><br><span class="line">            if(temp.de&gt;=H&amp;&amp;temp.cai&lt;H) &#123;B[BB++]=temp;continue;&#125;</span><br><span class="line">            if(temp.cai&lt;H&amp;&amp;temp.de&lt;H&amp;&amp;temp.de&gt;=temp.cai)&#123;C[CC++]=temp;continue;&#125;</span><br><span class="line">            D[DD++]=temp;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    sort(A,A+AA,cmp);</span><br><span class="line">    sort(B,B+BB,cmp);</span><br><span class="line">    sort(C,C+CC,cmp);</span><br><span class="line">    sort(D,D+DD,cmp);</span><br><span class="line">    printf(&quot;%d\n&quot;,num);</span><br><span class="line">    prr(A,AA);</span><br><span class="line">    prr(B,BB);</span><br><span class="line">    prr(C,CC);</span><br><span class="line">    prr(D,DD);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>好方法：<br>用结构体数组储存数据，每个数据有一个等级变量，通过这个变量和sort函数排序，直接将四种等级分开了，省去好多事<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">#include&lt;string.h&gt;</span><br><span class="line">#include&lt;algorithm&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">struct stu&#123;</span><br><span class="line">	char id[10];</span><br><span class="line">	int D;int C;</span><br><span class="line">	int flag,sum;</span><br><span class="line">&#125;temp,ex[100010];</span><br><span class="line">bool cmp(stu a,stu b)&#123;</span><br><span class="line">	if(a.flag!=b.flag)return a.flag&lt;b.flag;</span><br><span class="line">	else if(a.sum!=b.sum)return a.sum&gt;b.sum;</span><br><span class="line">	else if(a.D!=b.D)return a.D&gt;b.D;</span><br><span class="line">	else return strcmp(a.id,b.id)&lt;0;</span><br><span class="line">&#125;</span><br><span class="line">int main()&#123;</span><br><span class="line">	int N,L,H,local=0;</span><br><span class="line">	scanf(&quot;%d %d %d&quot;,&amp;N,&amp;L,&amp;H);</span><br><span class="line">	for(int i=0;i&lt;N;i++)&#123;</span><br><span class="line">		scanf(&quot;%s %d %d&quot;,temp.id,&amp;temp.D,&amp;temp.C);</span><br><span class="line">		if(temp.D&lt;L||temp.C&lt;L)continue;</span><br><span class="line">		strcpy(ex[local].id,temp.id);</span><br><span class="line">		ex[local].D=temp.D;</span><br><span class="line">		ex[local].C=temp.C;</span><br><span class="line">		if(ex[local].D&gt;=H&amp;&amp;ex[local].C&gt;=H)ex[local].flag=1;</span><br><span class="line">		else if(ex[local].D&gt;=H&amp;&amp;ex[i].C&lt;H)ex[local].flag=2;</span><br><span class="line">		else if(ex[local].D&lt;H&amp;&amp;ex[local].C&lt;H&amp;&amp;ex[local].D&gt;=ex[local].C)ex[local].flag=3;</span><br><span class="line">		else ex[local].flag=4;</span><br><span class="line">		ex[local].sum=ex[local].D+ex[local].C;</span><br><span class="line">		local++;</span><br><span class="line">	&#125;</span><br><span class="line">	sort(ex,ex+local,cmp);</span><br><span class="line">	printf(&quot;%d\n&quot;,local);</span><br><span class="line">	for(int i=0;i&lt;local;i++)&#123;</span><br><span class="line">		printf(&quot;%s %d %d\n&quot;,ex[i].id,ex[i].D,ex[i].C);</span><br><span class="line">	&#125;</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
       
     </div>
 
@@ -443,8 +444,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/【PAT】B1009 说反话.html" rel="next" title="【PAT】B1009 说反话">
-                <i class="fa fa-chevron-left"></i> 【PAT】B1009 说反话
+              <a href="/【PAT】B1014 福尔摩斯的约会.html" rel="next" title="【PAT】B1014 福尔摩斯的约会">
+                <i class="fa fa-chevron-left"></i> 【PAT】B1014 福尔摩斯的约会
               </a>
             
           </div>
@@ -453,8 +454,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/【PAT】B1011 A+B 和 C.html" rel="prev" title="【PAT】B1011 A+B 和 C">
-                【PAT】B1011 A+B 和 C <i class="fa fa-chevron-right"></i>
+              <a href="/【PAT】B1016 部分A+B.html" rel="prev" title="【PAT】B1016 部分A+B">
+                【PAT】B1016 部分A+B <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>

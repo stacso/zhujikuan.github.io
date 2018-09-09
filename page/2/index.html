@@ -314,7 +314,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://zhujikuan.com/【PAT】B1018 锤子剪刀布.html">
+    <link itemprop="mainEntityOfPage" href="http://zhujikuan.com/【PAT】B1014 福尔摩斯的约会.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="万能的翔王大人">
@@ -333,8 +333,8 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/【PAT】B1018 锤子剪刀布.html" itemprop="url">
-                  【PAT】B1018 锤子剪刀布
+                <a class="post-title-link" href="/【PAT】B1014 福尔摩斯的约会.html" itemprop="url">
+                  【PAT】B1014 福尔摩斯的约会
                 </a>
               
             
@@ -360,7 +360,7 @@
                 
               
 
-              <time title="Created: 2018-09-03 16:09:35 / Modified: 16:13:36" itemprop="dateCreated datePublished" datetime="2018-09-03T16:09:35+08:00">2018-09-03</time>
+              <time title="Created: 2018-09-09 21:04:40 / Modified: 21:16:29" itemprop="dateCreated datePublished" datetime="2018-09-09T21:04:40+08:00">2018-09-09</time>
             
 
             
@@ -418,8 +418,12 @@
       
         
           
-            <p>抄的柳婼小姐姐的，感觉三个数求最大那里用的真棒</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">int main() &#123;</span><br><span class="line">	int N; scanf(&quot;%d&quot;, &amp;N);</span><br><span class="line">	int jiawin = 0, yiwin = 0, ping = 0;</span><br><span class="line">	int jia[3] = &#123; 0 &#125;, yi[3] = &#123; 0 &#125;;</span><br><span class="line">	for (int i = 0; i&lt;N; i++) &#123;</span><br><span class="line">		getchar();</span><br><span class="line">		char arr[5]; scanf(&quot;%[^\n]&quot;, arr);</span><br><span class="line">		if (arr[0] == arr[2]) ping++;</span><br><span class="line">		else if (arr[0] == &apos;C&apos;&amp;&amp;arr[2] == &apos;B&apos;) &#123;</span><br><span class="line">			yiwin++;</span><br><span class="line">			yi[0]++;</span><br><span class="line">		&#125;</span><br><span class="line">		else if (arr[0] == &apos;C&apos;&amp;&amp;arr[2] == &apos;J&apos;) &#123;</span><br><span class="line">			jiawin++;</span><br><span class="line">			jia[1]++;</span><br><span class="line">		&#125;</span><br><span class="line">		else if (arr[0] == &apos;B&apos;&amp;&amp;arr[2] == &apos;C&apos;) &#123;</span><br><span class="line">			jiawin++;</span><br><span class="line">			jia[0]++;</span><br><span class="line">		&#125;</span><br><span class="line">		else if (arr[0] == &apos;B&apos;&amp;&amp;arr[2] == &apos;J&apos;) &#123;</span><br><span class="line">			yiwin++;</span><br><span class="line">			yi[2]++;</span><br><span class="line">		&#125;</span><br><span class="line">		else if (arr[0] == &apos;J&apos;&amp;&amp;arr[2] == &apos;C&apos;) &#123;</span><br><span class="line">			yiwin++;</span><br><span class="line">			yi[1]++;</span><br><span class="line">		&#125;</span><br><span class="line">		else if (arr[0] == &apos;J&apos;&amp;&amp;arr[2] == &apos;B&apos;) &#123;</span><br><span class="line">			jiawin++;</span><br><span class="line">			jia[2]++;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	printf(&quot;%d %d %d\n%d %d %d\n&quot;, jiawin, ping, yiwin, yiwin, ping, jiawin);</span><br><span class="line">	int maxjia = jia[0] &gt;= jia[1] ? 0 : 1;</span><br><span class="line">	maxjia = jia[maxjia] &gt;= jia[2] ? maxjia : 2;</span><br><span class="line">	int maxyi = yi[0] &gt;= yi[1] ? 0 : 1;</span><br><span class="line">	maxyi = yi[maxyi] &gt;= yi[2] ? maxyi : 2;</span><br><span class="line">	char str[4] = &quot;BCJ&quot;;</span><br><span class="line">	printf(&quot;%c %c&quot;, str[maxjia], str[maxyi]);</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            <ol>
+<li>因为前面两字符串中第 1 对相同的大写英文字母（大小写有区分）是第 4 个字母D，代表星期四；</li>
+<li>第 2 对相同的字符是 E ，那是第 5 个英文字母，代表一天里的第 14 个钟头（于是一天的 0 点到 23 点由数字 0 到 9、以及大写字母 A 到 N 表示）；</li>
+<li>后面两字符串第 1 对相同的英文字母 s 出现在第 4 个位置（从 0 开始计数）上，代表第 4分钟。<br>实现：（仔细推一下样例，有坑）<br>用四个字符串储存输入，<br>从头遍历前两个字符串，确定星期和小时（用字符串数组储存星期，方便了输出，可千万别用ifelse或者switch，太low）<br>从头遍历后两个字符，确定分钟<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#include&lt;cstdio&gt;</span><br><span class="line"></span><br><span class="line">using namespace std;</span><br><span class="line">int main()&#123;</span><br><span class="line">    int minum=0;</span><br><span class="line">    char week=&apos;Z&apos;,hour=&apos;Z&apos;;</span><br><span class="line">    char arr1[61],arr2[61],arr3[61],arr4[61];</span><br><span class="line">    scanf(&quot;%s %s %s %s&quot;,arr1,arr2,arr3,arr4);</span><br><span class="line">    for(int i=0;i&lt;60;i++)&#123;</span><br><span class="line">        if(arr1[i]==arr2[i])</span><br><span class="line">            if(week==&apos;Z&apos;&amp;&amp;arr2[i]&gt;=&apos;A&apos;&amp;&amp;arr2[i]&lt;=&apos;G&apos;) &#123;week=arr1[i];continue;&#125;</span><br><span class="line">        if(arr1[i]==arr2[i]&amp;&amp;week!=&apos;Z&apos;&amp;&amp;hour==&apos;Z&apos;&amp;&amp;((arr1[i]&gt;=&apos;A&apos;&amp;&amp;arr1[i]&lt;=&apos;N&apos;)||(arr1[i]&gt;=&apos;0&apos;&amp;&amp;arr1[i]&lt;=&apos;9&apos;))) hour=arr1[i];</span><br><span class="line">    &#125;</span><br><span class="line">    for(int i=0;i&lt;60;i++)&#123;</span><br><span class="line">        if(arr4[i]&gt;=&apos;a&apos;&amp;&amp;arr4[i]&lt;=&apos;z&apos;&amp;&amp;arr3[i]==arr4[i]&amp;&amp;minum==0)</span><br><span class="line">            minum=i;</span><br><span class="line">    &#125;</span><br><span class="line">    char wek[7][4]=&#123;&#123;&quot;MON&quot;&#125;,&#123;&quot;TUE&quot;&#125;,&#123;&quot;WED&quot;&#125;,&#123;&quot;THU&quot;&#125;,&#123;&quot;FRI&quot;&#125;,&#123;&quot;SAT&quot;&#125;,&#123;&quot;SUN&quot;&#125;&#125;;</span><br><span class="line">    printf(&quot;%s &quot;,wek[(int)week-&apos;A&apos;]);</span><br><span class="line">    if(hour&gt;=&apos;0&apos;&amp;&amp;hour&lt;=&apos;9&apos;)printf(&quot;%02d:&quot;,(int)hour-&apos;0&apos;);</span><br><span class="line">    else printf(&quot;%02d:&quot;,10+hour-&apos;A&apos;);</span><br><span class="line">    printf(&quot;%02d&quot;,minum);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+
           
         
       
@@ -472,7 +476,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://zhujikuan.com/【PAT】B1003 我要通过！.html">
+    <link itemprop="mainEntityOfPage" href="http://zhujikuan.com/【PAT】B1013 数素数.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="万能的翔王大人">
@@ -491,8 +495,8 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/【PAT】B1003 我要通过！.html" itemprop="url">
-                  【PAT】B1003 我要通过！
+                <a class="post-title-link" href="/【PAT】B1013 数素数.html" itemprop="url">
+                  【PAT】B1013 数素数
                 </a>
               
             
@@ -518,7 +522,7 @@
                 
               
 
-              <time title="Created: 2018-09-03 15:28:42 / Modified: 15:30:40" itemprop="dateCreated datePublished" datetime="2018-09-03T15:28:42+08:00">2018-09-03</time>
+              <time title="Created: 2018-09-09 19:05:18 / Modified: 19:07:33" itemprop="dateCreated datePublished" datetime="2018-09-09T19:05:18+08:00">2018-09-09</time>
             
 
             
@@ -576,8 +580,8 @@
       
         
           
-            <p>我觉得这是PAT中最坑的一道题，表述令人很不适应<br>分析过程：<br>条件1.只有P，A，T三种字符<br>条件2.xPATx正确，x可以是空串，或者由A组成的字符串<br>条件3.如果aPbTc是正确的，aPbATca也是正确的，a，b，c与上一条件x相同<br>1,2为基本条件，根据1,2推3<br>根据条件1，2=》》》xPATx正确<br>条件3中：<br>        首先有xPATx正确<br>        aPbTc中a=x，b=1，c=x；<br>        则有aPbATca中a=x，b+1=2，c+a=2x；<br>        则有a=x，b+1=3，c+a=3x；<br>        。。。。<br>        以此类推可得对于aPbTc要满足a<em>b=c,而且b》=1<br><--------------------------------------------><br>解决了逻辑问题，要处理代码了。<br>将一行数据存入字符串，遍历，每个字符map映射加一，并保存PT的位置<br>只要map中PT只有一个，A至少一个<br>另外要使a</--------------------------------------------></em>b = c，只要p * (t - p - 1) == strlen(arr) - t - 1，不用考虑T是否在P前边，如果那样计算出来的b为负</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">#include&lt;string.h&gt;</span><br><span class="line">#include&lt;map&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">int main() &#123;</span><br><span class="line">	int N; scanf(&quot;%d&quot;, &amp;N);</span><br><span class="line">	for (int i = 0; i&lt;N; i++) &#123;</span><br><span class="line">		char arr[101];</span><br><span class="line">		scanf(&quot;%s&quot;, arr);</span><br><span class="line">		int p, t;</span><br><span class="line">		map&lt;char, int&gt; mp;</span><br><span class="line">		for (int j = 0; j&lt;strlen(arr); j++) &#123;</span><br><span class="line">			mp[arr[j]]++;</span><br><span class="line">			if (arr[j] == &apos;P&apos;) p = j;</span><br><span class="line">			if (arr[j] == &apos;T&apos;) t = j;</span><br><span class="line">		&#125;</span><br><span class="line">		if (mp[&apos;P&apos;] == 1 &amp;&amp; mp[&apos;T&apos;] == 1 &amp;&amp; mp[&apos;A&apos;] != 0 &amp;&amp; mp.size() == 3 &amp;&amp; p*(t - p - 1) == strlen(arr) - t - 1) &#123;</span><br><span class="line">			printf(&quot;YES\n&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">		else &#123;</span><br><span class="line">			printf(&quot;NO\n&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            <p>用埃氏筛筛出素数表（节约时间）<br>素数的筛选范围不能小了，一定要够大</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">    int N,M;scanf(&quot;%d %d&quot;,&amp;M,&amp;N);</span><br><span class="line">    int pnum=0,num=0;</span><br><span class="line">    bool hashtable[1000000]=&#123;0&#125;;</span><br><span class="line">    for(int i=2;i&lt;1000000;i++)&#123;</span><br><span class="line">        if(hashtable[i]==false)&#123;//如果没有被筛去</span><br><span class="line">            pnum++;</span><br><span class="line">            if(pnum&gt;=M&amp;&amp;pnum&lt;=N)&#123;//空格，换行</span><br><span class="line">                num++;</span><br><span class="line">                if(num%10!=1)printf(&quot; &quot;);</span><br><span class="line">                printf(&quot;%d&quot;,i);</span><br><span class="line">                if(num%10==0)printf(&quot;\n&quot;);</span><br><span class="line">            &#125;</span><br><span class="line">            for(int j=i+i;j&lt;1000000;j+=i)&#123;</span><br><span class="line">                hashtable[j]=true;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
           
         
       
@@ -630,7 +634,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://zhujikuan.com/【PAT】B1002 写出这个数.html">
+    <link itemprop="mainEntityOfPage" href="http://zhujikuan.com/【PAT】B1012 数字分类.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="万能的翔王大人">
@@ -649,8 +653,8 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/【PAT】B1002 写出这个数.html" itemprop="url">
-                  【PAT】B1002 写出这个数
+                <a class="post-title-link" href="/【PAT】B1012 数字分类.html" itemprop="url">
+                  【PAT】B1012 数字分类
                 </a>
               
             
@@ -676,7 +680,7 @@
                 
               
 
-              <time title="Created: 2018-09-03 10:47:04 / Modified: 10:59:05" itemprop="dateCreated datePublished" datetime="2018-09-03T10:47:04+08:00">2018-09-03</time>
+              <time title="Created: 2018-09-09 19:00:56 / Modified: 19:04:39" itemprop="dateCreated datePublished" datetime="2018-09-09T19:00:56+08:00">2018-09-09</time>
             
 
             
@@ -734,11 +738,7 @@
       
         
           
-            <blockquote>
-<p>思路：<br><code>1.以字符串形式输入数据，计算结果</code><br><code>2.使用sprintf将结果数字转换为字符串（将数字每一位分开）</code><br><code>3.分别输出字符每一位</code></p>
-</blockquote>
-<p>1，笨方法，用的ifelse来判断输出<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">#include&lt;string.h&gt;</span><br><span class="line">char arr[110];</span><br><span class="line"></span><br><span class="line">int getsum() &#123;</span><br><span class="line">	int sum = 0;</span><br><span class="line">	int len = strlen(arr);</span><br><span class="line">	for (int i = 0; i&lt;len; i++) &#123;</span><br><span class="line">		sum += arr[i] - &apos;0&apos;;</span><br><span class="line">	&#125;</span><br><span class="line">	return sum;</span><br><span class="line">&#125;</span><br><span class="line">int main() &#123;</span><br><span class="line">	scanf(&quot;%s&quot;, arr);</span><br><span class="line">	int sum = getsum();</span><br><span class="line">	sprintf(arr, &quot;%d&quot;, sum);</span><br><span class="line">	int len = strlen(arr);</span><br><span class="line">	for (int i = 0; i&lt;len; i++) &#123;</span><br><span class="line">		if (i != 0) printf(&quot; &quot;);</span><br><span class="line">		if (arr[i] == &apos;1&apos;)</span><br><span class="line">			printf(&quot;yi&quot;);</span><br><span class="line">		else if (arr[i] == &apos;2&apos;)</span><br><span class="line">			printf(&quot;er&quot;);</span><br><span class="line">		else if (arr[i] == &apos;3&apos;)</span><br><span class="line">			printf(&quot;san&quot;);</span><br><span class="line">		else if (arr[i] == &apos;4&apos;)</span><br><span class="line">			printf(&quot;si&quot;);</span><br><span class="line">		else if (arr[i] == &apos;5&apos;)</span><br><span class="line">			printf(&quot;wu&quot;);</span><br><span class="line">		else if (arr[i] == &apos;6&apos;)</span><br><span class="line">			printf(&quot;liu&quot;);</span><br><span class="line">		else if (arr[i] == &apos;7&apos;)</span><br><span class="line">			printf(&quot;qi&quot;);</span><br><span class="line">		else if (arr[i] == &apos;8&apos;)</span><br><span class="line">			printf(&quot;ba&quot;);</span><br><span class="line">		else if (arr[i] == &apos;9&apos;)</span><br><span class="line">			printf(&quot;jiu&quot;);</span><br><span class="line">		else if (arr[i] == &apos;0&apos;)</span><br><span class="line">			printf(&quot;ling&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>2，简化代码，用如下代码简化输出部分的ifelse结构<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">char data[10][20] = &#123; &quot;ling&quot;,&quot;yi&quot;,&quot;er&quot;,&quot;san&quot;,&quot;si&quot;,&quot;wu&quot;,&quot;liu&quot;,&quot;qi&quot;,&quot;ba&quot;,&quot;jiu&quot; &#125;;</span><br><span class="line">printf(&quot;%s&quot;, data[arr[i] - &apos;0&apos;]);</span><br></pre></td></tr></table></figure></p>
+            <p>注意逻辑的描述，只要认真看题，就能做对，如果自己结果一直不正确，请仔细推一下样例结果<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line">int arr[1005];</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">    int N,yu,A1,A2,flag2=1,A3,A4,A4a,A5,A2a=0,A5a=0;</span><br><span class="line">    A1=A2=A3=A4=A4a=A5=0;</span><br><span class="line">    scanf(&quot;%d&quot;,&amp;N);</span><br><span class="line">    for(int i=0;i&lt;N;i++)&#123;//输入数据,放入数组</span><br><span class="line">        scanf(&quot;%d&quot;,&amp;arr[i]);</span><br><span class="line">        yu = arr[i]%5;</span><br><span class="line">        if(yu==0&amp;&amp;arr[i]%2==0) A1+=arr[i];</span><br><span class="line">        if(yu==1&amp;&amp;flag2==1) &#123;A2+=arr[i];flag2=0;A2a=1;continue;&#125;</span><br><span class="line">        if(yu==1&amp;&amp;flag2==0) &#123;A2-=arr[i];flag2=1;A2a=1;&#125;</span><br><span class="line">        if(yu==2) A3++;</span><br><span class="line">        if(yu==3) &#123;A4+=arr[i];A4a++;&#125;</span><br><span class="line">        if(yu==4&amp;&amp;A5&lt;arr[i]) &#123;A5=arr[i];A5a++;&#125; </span><br><span class="line">    &#125;</span><br><span class="line">    for(int i=0;i&lt;5;i++)&#123;</span><br><span class="line">        if(i!=0) printf(&quot; &quot;);</span><br><span class="line">        if((i==0&amp;&amp;A1==0)||(i==1&amp;&amp;A2a==0)||(i==2&amp;&amp;A3==0)||(i==3&amp;&amp;A4a==0)||(i==4&amp;&amp;A5a==0))&#123;</span><br><span class="line">            printf(&quot;N&quot;);continue;</span><br><span class="line">        &#125;</span><br><span class="line">        if(i==0) printf(&quot;%d&quot;,A1);</span><br><span class="line">        if(i==1) printf(&quot;%d&quot;,A2);</span><br><span class="line">        if(i==2) printf(&quot;%d&quot;,A3);</span><br><span class="line">        if(i==3) printf(&quot;%.1f&quot;,A4/(float)A4a);</span><br><span class="line">        if(i==4) printf(&quot;%d&quot;,A5);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
           
         
@@ -792,7 +792,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://zhujikuan.com/【PAT】B.html">
+    <link itemprop="mainEntityOfPage" href="http://zhujikuan.com/【PAT】B1011 A+B 和 C.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="万能的翔王大人">
@@ -811,8 +811,8 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/【PAT】B.html" itemprop="url">
-                  【PAT】
+                <a class="post-title-link" href="/【PAT】B1011 A+B 和 C.html" itemprop="url">
+                  【PAT】B1011 A+B 和 C
                 </a>
               
             
@@ -838,7 +838,7 @@
                 
               
 
-              <time title="Created: 2018-09-03 10:10:02 / Modified: 10:10:36" itemprop="dateCreated datePublished" datetime="2018-09-03T10:10:02+08:00">2018-09-03</time>
+              <time title="Created: 2018-09-09 18:59:35 / Modified: 19:00:20" itemprop="dateCreated datePublished" datetime="2018-09-09T18:59:35+08:00">2018-09-09</time>
             
 
             
@@ -896,7 +896,8 @@
       
         
           
-            <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+            <p>注意数据的范围，使用long long就行了<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">    int N;scanf(&quot;%d&quot;,&amp;N);</span><br><span class="line">    for(int i=1;i&lt;=N;i++)&#123;</span><br><span class="line">        long long A,B,C;</span><br><span class="line">        scanf(&quot; %ld%ld%ld&quot;,&amp;A,&amp;B,&amp;C);</span><br><span class="line">        A+=B;</span><br><span class="line">        if(A&gt;C)</span><br><span class="line">            printf(&quot;Case #%ld: true\n&quot;,i);</span><br><span class="line">        else</span><br><span class="line">            printf(&quot;Case #%ld: false\n&quot;,i);</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
           
         
       
@@ -949,7 +950,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://zhujikuan.com/【PAT】B1001 害死人不偿命的(3n+1)猜想.html">
+    <link itemprop="mainEntityOfPage" href="http://zhujikuan.com/【PAT】B1010 一元多项式求导.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="万能的翔王大人">
@@ -968,8 +969,8 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/【PAT】B1001 害死人不偿命的(3n+1)猜想.html" itemprop="url">
-                  【PAT】B1001 害死人不偿命的(3n+1)猜想
+                <a class="post-title-link" href="/【PAT】B1010 一元多项式求导.html" itemprop="url">
+                  【PAT】B1010 一元多项式求导
                 </a>
               
             
@@ -995,7 +996,7 @@
                 
               
 
-              <time title="Created: 2018-09-03 10:06:45 / Modified: 11:02:26" itemprop="dateCreated datePublished" datetime="2018-09-03T10:06:45+08:00">2018-09-03</time>
+              <time title="Created: 2018-09-09 16:54:40 / Modified: 18:56:39" itemprop="dateCreated datePublished" datetime="2018-09-09T16:54:40+08:00">2018-09-09</time>
             
 
             
@@ -1053,10 +1054,8 @@
       
         
           
-            <blockquote>
-<p>超级简单题<br>偶数砍掉一半，<br>奇数乘三加一砍掉一半</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line">int mian()&#123;</span><br><span class="line">	int n,step=0;</span><br><span class="line">	scanf(&quot;%d&quot;,n);</span><br><span class="line">	while(n!=1)&#123;</span><br><span class="line">		if(n%2==0)&#123;		//偶数</span><br><span class="line">			n/=2;</span><br><span class="line">		&#125;else&#123;			//奇数</span><br><span class="line">			n=(3*2+1)/2;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            <p>在输入时就进行结果的计算，忽略常数项，<br>顺序输出</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;cstdio&gt;</span><br><span class="line">#include&lt;vector&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">struct duo&#123;</span><br><span class="line">    int xishu,zhishu;</span><br><span class="line">&#125;M;</span><br><span class="line">int main()&#123;</span><br><span class="line">    vector&lt;duo&gt; arr;//结构体向量</span><br><span class="line">    while(scanf(&quot;%d %d&quot;,&amp;M.xishu,&amp;M.zhishu)!=EOF)&#123;</span><br><span class="line">        M.xishu*=M.zhishu;</span><br><span class="line">        M.zhishu--;</span><br><span class="line">        if(M.zhishu&gt;=0)</span><br><span class="line">            arr.push_back(M);</span><br><span class="line">    &#125;</span><br><span class="line">    if(arr.size()==0) printf(&quot;0 0&quot;);//如果结果为0</span><br><span class="line">    else&#123;</span><br><span class="line">        for(int i=0;i&lt;arr.size();i++)&#123;</span><br><span class="line">            if(i!=0)printf(&quot; &quot;);</span><br><span class="line">            printf(&quot;%d %d&quot;,arr[i].xishu,arr[i].zhishu);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
           
         
       
@@ -1109,7 +1108,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://zhujikuan.com/【PAT】B1083 是否存在相等的差.html">
+    <link itemprop="mainEntityOfPage" href="http://zhujikuan.com/【PAT】B1009 说反话.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="万能的翔王大人">
@@ -1128,8 +1127,8 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/【PAT】B1083 是否存在相等的差.html" itemprop="url">
-                  【PAT】1083 是否存在相等的差（20 分）
+                <a class="post-title-link" href="/【PAT】B1009 说反话.html" itemprop="url">
+                  【PAT】B1009 说反话
                 </a>
               
             
@@ -1155,7 +1154,7 @@
                 
               
 
-              <time title="Created: 2018-08-23 08:01:50 / Modified: 08:02:32" itemprop="dateCreated datePublished" datetime="2018-08-23T08:01:50+08:00">2018-08-23</time>
+              <time title="Created: 2018-09-09 16:54:40 / Modified: 18:48:45" itemprop="dateCreated datePublished" datetime="2018-09-09T16:54:40+08:00">2018-09-09</time>
             
 
             
@@ -1213,9 +1212,8 @@
       
         
           
-            <p>终于做的有点眉目了，今天学习了一点stl的皮毛，解题瞬间变容易了<br><strong>下边开始分析本题</strong><br>    这道题如果用纯c解决实在太麻烦，试了半天两个超时，果断放弃，还是用map方便；<br>    我的方法与柳神的方法是有区别的，我只是用map来保存学校在结构体数组中的地址。<br>    代码中每一块都有注释，绝对不是耍流氓的直接贴一片代码，</p>
-<p><strong>注意：</strong><br>最后学校的成绩要求取整，为了省去遍历一遍学校结构体数组，所有用到了float性分数的地方都强转了int</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;algorithm&gt;</span><br><span class="line">#include&lt;map&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">struct sch&#123;</span><br><span class="line">	string name;</span><br><span class="line">	float score=0;</span><br><span class="line">	int stu=0;</span><br><span class="line">&#125;arr[100005];//这个数组可以小点，学校怎么可能这么多</span><br><span class="line">bool cmp(sch A,sch B)&#123;</span><br><span class="line">	if((int)A.score!=(int)B.score) return (int)A.score&gt;(int)B.score;//分数不同，谁大谁在前</span><br><span class="line">	else if(A.stu!=B.stu) return A.stu&lt;B.stu;		//分数相同，学生数不同，学生数小的在前</span><br><span class="line">	else return A.name&lt;B.name;			//否则只能用字典序了，谁小谁的字典序在前</span><br><span class="line">&#125;</span><br><span class="line">int main()&#123;</span><br><span class="line">	int N;scanf(&quot;%d&quot;,&amp;N);			//学生数的定义和输入</span><br><span class="line">	int num=0;//学校数</span><br><span class="line">	map&lt;string,int&gt; mp;							//mp用来存放学校名字符串到结构体数组的映射</span><br><span class="line">	for(int i=0;i&lt;N;i++)&#123;</span><br><span class="line">		string id,school;float score;</span><br><span class="line">		cin&gt;&gt;id;scanf(&quot;%f&quot;,&amp;score);cin&gt;&gt;school;</span><br><span class="line">		for(int j=0;j&lt;school.length();j++)&#123;			//名字变小写</span><br><span class="line">			school[j]=tolower(school[j]);</span><br><span class="line">		&#125;</span><br><span class="line">		if(id[0]==&apos;B&apos;) score/=1.5;			//计算当前学生可以给学校带来多少分</span><br><span class="line">		if(id[0]==&apos;T&apos;) score*=1.5;</span><br><span class="line">		if(mp.count(school)==0)&#123;			//如果此学校第一次出现</span><br><span class="line">			mp[school]=num++;</span><br><span class="line">			arr[num-1].name=school;</span><br><span class="line">		&#125;</span><br><span class="line">		arr[mp[school]].score+=score;			//给这个学校加上这个学生的分</span><br><span class="line">		arr[mp[school]].stu++;			//学校的学生数加加</span><br><span class="line">	&#125;</span><br><span class="line">	sort(arr,arr+num,cmp);				//对结构体数组进行排序</span><br><span class="line">	int mingci=1;</span><br><span class="line">	printf(&quot;%d\n1 &quot;,num);				//先输出了学校数和第一名的学校</span><br><span class="line">	cout&lt;&lt;arr[0].name;</span><br><span class="line">	printf(&quot; %d %d&quot;,(int)arr[0].score,arr[0].stu);</span><br><span class="line">	for(int i=1;i&lt;num;i++)&#123;						//从第二个学校开始的</span><br><span class="line">		if((int)arr[i].score!=(int)arr[i-1].score)	//如果分数和前一个学校相同，当然mingci就行同了</span><br><span class="line">			mingci=i+1;				//如果分数不同，那么名次正好等于i+1</span><br><span class="line">		printf(&quot;\n%d &quot;,mingci);				//输出当前学校的信息</span><br><span class="line">		cout&lt;&lt;arr[i].name;</span><br><span class="line">		printf(&quot; %d %d&quot;,(int)arr[i].score,arr[i].stu);</span><br><span class="line">	&#125;</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            <p>在输入时直接分别将每个单词放入字符串，逆序输出字符串数组<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">    int num=0;</span><br><span class="line">    char ans[90][90];</span><br><span class="line">    while(scanf(&quot;%s&quot;,ans[num])!=EOF)</span><br><span class="line">        num++;</span><br><span class="line">    for(int i=num-1;i&gt;=0;i--)&#123;</span><br><span class="line">        printf(&quot;%s&quot;,ans[i]);</span><br><span class="line">        if(i&gt;0) printf(&quot; &quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
           
         
       
@@ -1268,7 +1266,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://zhujikuan.com/【PAT】B1084 外观数列.html">
+    <link itemprop="mainEntityOfPage" href="http://zhujikuan.com/【PAT】B1008 数组元素循环右移问题.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="万能的翔王大人">
@@ -1287,8 +1285,8 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/【PAT】B1084 外观数列.html" itemprop="url">
-                  【PAT】B1084 外观数列（20 分）（纯C）
+                <a class="post-title-link" href="/【PAT】B1008 数组元素循环右移问题.html" itemprop="url">
+                  【PAT】B1008 数组元素循环右移问题
                 </a>
               
             
@@ -1314,7 +1312,7 @@
                 
               
 
-              <time title="Created: 2018-08-23 08:00:33 / Modified: 08:00:35" itemprop="dateCreated datePublished" datetime="2018-08-23T08:00:33+08:00">2018-08-23</time>
+              <time title="Created: 2018-09-09 16:37:51 / Modified: 17:47:59" itemprop="dateCreated datePublished" datetime="2018-09-09T16:37:51+08:00">2018-09-09</time>
             
 
             
@@ -1372,7 +1370,13 @@
       
         
           
-            <p>第一层循环，用来循环计算第几个元素<br>第二层用来计算当前元素的下一个<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">#include&lt;string.h&gt;</span><br><span class="line">char aaa[100000] = &#123; &apos;\0&apos; &#125;;</span><br><span class="line"></span><br><span class="line">int main() &#123;</span><br><span class="line">	int N; scanf(&quot;%c %d&quot;,&amp;aaa[0], &amp;N);</span><br><span class="line">	for (int i = 2; i &lt;= N; i++) &#123;//第几个元素</span><br><span class="line">		char bbb[100000] = &#123; &apos;\0&apos; &#125;;					//创建空字符串，保存生成的下一个元素</span><br><span class="line">		int b = 0, num = 0;</span><br><span class="line">		for (int j = 0; aaa[j] != &apos;\0&apos;; j++) &#123;			//计算一个元素</span><br><span class="line">			if (aaa[j] == aaa[j + 1]) &#123;					//重复什么都不干，就计数</span><br><span class="line">				num++;</span><br><span class="line">			&#125;</span><br><span class="line">			else &#123;												//不重复，该输出了</span><br><span class="line">				bbb[b++] = aaa[j];</span><br><span class="line">				if (num == 0)								//就一个</span><br><span class="line">					bbb[b++] = &apos;0&apos; + 1;</span><br><span class="line">				else &#123;											//重复</span><br><span class="line">					int temp = num + 1;</span><br><span class="line">					num = 0;</span><br><span class="line">					bbb[b++] = temp % 10 + &apos;0&apos;;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		strcpy(aaa, bbb);								//将生成的元素复制到原始字符串</span><br><span class="line">	&#125;</span><br><span class="line">	printf(&quot;%s&quot;, aaa);</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+            <ol>
+<li><p>猥琐方法<br> <img src="https://www.zhujikuan.com/images/PATB/1008.png" alt="1008猥琐解法"><br> 直接分成两部分输出数组元素，注意空格的问题</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">int arr[101];</span><br><span class="line">void Priarr(int a,int b)&#123;</span><br><span class="line">    if(a&lt;=b)</span><br><span class="line">		for(int i=a;i&lt;=b;i++)&#123;</span><br><span class="line">			if(i!=a)printf(&quot; &quot;);</span><br><span class="line">			printf(&quot;%d&quot;,arr[i]);</span><br><span class="line">		&#125;</span><br><span class="line">&#125;</span><br><span class="line">int main()&#123;</span><br><span class="line">    int N,M;</span><br><span class="line">    scanf(&quot;%d%d&quot;,&amp;N,&amp;M);</span><br><span class="line">    M%=N;//化简移动次数</span><br><span class="line">    for(int i=1;i&lt;=N;i++)&#123;//从1开始存储</span><br><span class="line">        scanf(&quot;%d&quot;,&amp;arr[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    Priarr(N-M+1,N);</span><br><span class="line">    if(N-M+1&lt;N)printf(&quot; &quot;);</span><br><span class="line">    Priarr(1,N-M);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>光明正大的标准解法<br>整体逆置，两部分分别逆置<br><img src="https://www.zhujikuan.com/images/PATB/10082.png" alt="1008"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;algorithm&gt;</span><br><span class="line">#include &lt;vector&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">int main() &#123;</span><br><span class="line">    int N, M;</span><br><span class="line">    cin &gt;&gt; N &gt;&gt; M;</span><br><span class="line">    int a[N];</span><br><span class="line">    for (int i = 0; i &lt; N; i++)</span><br><span class="line">        scanf(&quot;%d&quot;,&amp;a[i]);</span><br><span class="line">    M %= N;</span><br><span class="line">    if (M != 0) &#123;</span><br><span class="line">        reverse(a, a+N);</span><br><span class="line">        reverse(a, a+M);</span><br><span class="line">        reverse(a+M, a+N);</span><br><span class="line">    &#125;</span><br><span class="line">    for (int i = 0; i &lt; N - 1; i++)</span><br><span class="line">        printf(&quot;%d &quot;,a[i]);</span><br><span class="line">    printf(&quot;%d&quot;,a[N-1]);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
 
           
         
@@ -1426,7 +1430,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://zhujikuan.com/【PAT】B1085 PAT单位排行.html">
+    <link itemprop="mainEntityOfPage" href="http://zhujikuan.com/【PAT】B1007 素数对猜想.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="万能的翔王大人">
@@ -1445,8 +1449,8 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/【PAT】B1085 PAT单位排行.html" itemprop="url">
-                  【PAT】B1085 PAT单位排行（25 分）（c++实现）
+                <a class="post-title-link" href="/【PAT】B1007 素数对猜想.html" itemprop="url">
+                  【PAT】B1007 素数对猜想
                 </a>
               
             
@@ -1472,24 +1476,12 @@
                 
               
 
-              <time title="Created: 2018-08-23 07:58:41" itemprop="dateCreated datePublished" datetime="2018-08-23T07:58:41+08:00">2018-08-23</time>
+              <time title="Created: 2018-09-09 16:31:37 / Modified: 16:33:22" itemprop="dateCreated datePublished" datetime="2018-09-09T16:31:37+08:00">2018-09-09</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2018-08-31 15:42:08" itemprop="dateModified" datetime="2018-08-31T15:42:08+08:00">2018-08-31</time>
               
             
           </span>
@@ -1542,173 +1534,10 @@
       
         
           
-            <p>终于做的有点眉目了，今天学习了一点stl的皮毛，解题瞬间变容易了<br><strong>下边开始分析本题</strong><br>    这道题如果用纯c解决实在太麻烦，试了半天两个超时，果断放弃，还是用map方便；<br>    我的方法与柳神的方法是有区别的，我只是用map来保存学校在结构体数组中的地址。<br>    代码中每一块都有注释，绝对不是耍流氓的直接贴一片代码，</p>
-<p><strong>注意：</strong><br>最后学校的成绩要求取整，为了省去遍历一遍学校结构体数组，所有用到了float型分数的地方都强转了int</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;algorithm&gt;</span><br><span class="line">#include&lt;map&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">struct sch&#123;</span><br><span class="line">	string name;</span><br><span class="line">	float score=0;</span><br><span class="line">	int stu=0;</span><br><span class="line">&#125;arr[100005];//这个数组可以小点，学校怎么可能这么多</span><br><span class="line">bool cmp(sch A,sch B)&#123;</span><br><span class="line">	if((int)A.score!=(int)B.score) return (int)A.score&gt;(int)B.score;//分数不同，谁大谁在前</span><br><span class="line">	else if(A.stu!=B.stu) return A.stu&lt;B.stu;		//分数相同，学生数不同，学生数小的在前</span><br><span class="line">	else return A.name&lt;B.name;			//否则只能用字典序了，谁小谁的字典序在前</span><br><span class="line">&#125;</span><br><span class="line">int main()&#123;</span><br><span class="line">	int N;scanf(&quot;%d&quot;,&amp;N);			//学生数的定义和输入</span><br><span class="line">	int num=0;//学校数</span><br><span class="line">	map&lt;string,int&gt; mp;							//mp用来存放学校名字符串到结构体数组的映射</span><br><span class="line">	for(int i=0;i&lt;N;i++)&#123;</span><br><span class="line">		string id,school;float score;</span><br><span class="line">		cin&gt;&gt;id;scanf(&quot;%f&quot;,&amp;score);cin&gt;&gt;school;</span><br><span class="line">		for(int j=0;j&lt;school.length();j++)&#123;			//名字变小写</span><br><span class="line">			school[j]=tolower(school[j]);</span><br><span class="line">		&#125;</span><br><span class="line">		if(id[0]==&apos;B&apos;) score/=1.5;			//计算当前学生可以给学校带来多少分</span><br><span class="line">		if(id[0]==&apos;T&apos;) score*=1.5;</span><br><span class="line">		if(mp.count(school)==0)&#123;			//如果此学校第一次出现</span><br><span class="line">			mp[school]=num++;</span><br><span class="line">			arr[num-1].name=school;</span><br><span class="line">		&#125;</span><br><span class="line">		arr[mp[school]].score+=score;			//给这个学校加上这个学生的分</span><br><span class="line">		arr[mp[school]].stu++;			//学校的学生数加加</span><br><span class="line">	&#125;</span><br><span class="line">	sort(arr,arr+num,cmp);				//对结构体数组进行排序</span><br><span class="line">	int mingci=1;</span><br><span class="line">	printf(&quot;%d\n1 &quot;,num);				//先输出了学校数和第一名的学校</span><br><span class="line">	cout&lt;&lt;arr[0].name;</span><br><span class="line">	printf(&quot; %d %d&quot;,(int)arr[0].score,arr[0].stu);</span><br><span class="line">	for(int i=1;i&lt;num;i++)&#123;						//从第二个学校开始的</span><br><span class="line">		if((int)arr[i].score!=(int)arr[i-1].score)	//如果分数和前一个学校相同，当然mingci就行同了</span><br><span class="line">			mingci=i+1;				//如果分数不同，那么名次正好等于i+1</span><br><span class="line">		printf(&quot;\n%d &quot;,mingci);				//输出当前学校的信息</span><br><span class="line">		cout&lt;&lt;arr[i].name;</span><br><span class="line">		printf(&quot; %d %d&quot;,(int)arr[i].score,arr[i].stu);</span><br><span class="line">	&#125;</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://zhujikuan.com/fedora、centos、rhel安装Adobe Flash Player 28.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="万能的翔王大人">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zhujikuan's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/fedora、centos、rhel安装Adobe Flash Player 28.html" itemprop="url">
-                  fedora、centos、rhel安装Adobe Flash Player 28
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2018-08-22 22:13:10" itemprop="dateCreated datePublished" datetime="2018-08-22T22:13:10+08:00">2018-08-22</time>
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>#切换到root用户</p>
-<p>#添加Adobe Repository</p>
-<h2 id="Adobe-Repository-32-bit-x86"><a href="#Adobe-Repository-32-bit-x86" class="headerlink" title="Adobe Repository 32-bit x86"></a>Adobe Repository 32-bit x86</h2><p>rpm -ivh <a href="http://linuxdownload.adobe.com/adobe-release/adobe-release-i386-1.0-1.noarch.rpm" target="_blank" rel="noopener">http://linuxdownload.adobe.com/adobe-release/adobe-release-i386-1.0-1.noarch.rpm</a><br>rpm –import /etc/pki/rpm-gpg/RPM-GPG-KEY-adobe-linux</p>
-<h2 id="Adobe-Repository-64-bit-x86-64"><a href="#Adobe-Repository-64-bit-x86-64" class="headerlink" title="Adobe Repository 64-bit x86_64"></a>Adobe Repository 64-bit x86_64</h2><p>rpm -ivh <a href="http://linuxdownload.adobe.com/adobe-release/adobe-release-x86_64-1.0-1.noarch.rpm" target="_blank" rel="noopener">http://linuxdownload.adobe.com/adobe-release/adobe-release-x86_64-1.0-1.noarch.rpm</a><br>rpm –import /etc/pki/rpm-gpg/RPM-GPG-KEY-adobe-linux</p>
-<p>#安装Adobe Flash Player 28</p>
-<h1 id="Fedora-27-26-25-24"><a href="#Fedora-27-26-25-24" class="headerlink" title="Fedora 27/26/25/24"></a>Fedora 27/26/25/24</h1><p>dnf install flash-plugin alsa-plugins-pulseaudio libcurl</p>
-<h1 id="Fedora-23-22"><a href="#Fedora-23-22" class="headerlink" title="Fedora 23/22"></a>Fedora 23/22</h1><p>dnf install flash-plugin nspluginwrapper alsa-plugins-pulseaudio libcurl</p>
-<h1 id="CentOS-RHEL-7-4"><a href="#CentOS-RHEL-7-4" class="headerlink" title="CentOS/RHEL 7.4"></a>CentOS/RHEL 7.4</h1><p>yum install flash-plugin alsa-plugins-pulseaudio libcurl</p>
-<h1 id="CentOS-RHEL-6-9"><a href="#CentOS-RHEL-6-9" class="headerlink" title="CentOS/RHEL 6.9"></a>CentOS/RHEL 6.9</h1><p>yum install flash-plugin nspluginwrapper alsa-plugins-pulseaudio libcurl</p>
-<p>#测试下你的flash能否正常使用<br><a href="https://www.adobe.com/software/flash/about/" target="_blank" rel="noopener">Check is Adobe Flash Plugin Working</a></p>
-<hr>
-<p>转载自<a href="https://www.if-not-true-then-false.com/2010/install-adobe-flash-player-10-on-fedora-centos-red-hat-rhel/" target="_blank" rel="noopener">Adobe Flash Player 28 on Fedora 27/26, CentOS/RHEL 7.4/6.9</a></p>
+            <ol>
+<li>素数筛筛出规定范围内的所有素数存入数组</li>
+<li>遍历数组，如果满足于后边的差2，计数器加加<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;cstdio&gt;</span><br><span class="line">const int maxn = 10000001;</span><br><span class="line">int prime[maxn]=&#123;0&#125;;</span><br><span class="line">bool p[maxn] = &#123;0&#125;;</span><br><span class="line">int pnum =0;</span><br><span class="line">void Find_prime(int n)</span><br><span class="line">&#123;</span><br><span class="line">	for(int i=2; i&lt;=n; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		if(p[i] == false)</span><br><span class="line">		&#123;</span><br><span class="line">			prime[pnum++] = i;</span><br><span class="line">			for(int j=i+i; j&lt;= n; j+=i)</span><br><span class="line">			&#123;</span><br><span class="line">				p[j] = true;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	int N,count=0;//素数范围</span><br><span class="line">	scanf(&quot;%d&quot;,&amp;N);</span><br><span class="line">	Find_prime(N);//找到N以内的所有素数存入数组prime</span><br><span class="line">	for(int i=0; i&lt;pnum; i++)&#123;//遍历素数表</span><br><span class="line">		if(prime[i+1] - prime[i] == 2)</span><br><span class="line">			count++;</span><br><span class="line">	&#125;</span><br><span class="line">	printf(&quot;%d&quot;,count);</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
 
           
         
@@ -1762,7 +1591,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://zhujikuan.com/hello-world.html">
+    <link itemprop="mainEntityOfPage" href="http://zhujikuan.com/【PAT】B1006 换个格式输出整数.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="万能的翔王大人">
@@ -1781,8 +1610,8 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/hello-world.html" itemprop="url">
-                  fedora、centos、rhel安装Adobe Flash Player 28
+                <a class="post-title-link" href="/【PAT】B1006 换个格式输出整数.html" itemprop="url">
+                  【PAT】 B1006 换个格式输出整数
                 </a>
               
             
@@ -1808,7 +1637,7 @@
                 
               
 
-              <time title="Created: 2018-08-22 20:25:38 / Modified: 22:12:46" itemprop="dateCreated datePublished" datetime="2018-08-22T20:25:38+08:00">2018-08-22</time>
+              <time title="Created: 2018-09-09 16:25:23 / Modified: 16:26:30" itemprop="dateCreated datePublished" datetime="2018-09-09T16:25:23+08:00">2018-09-09</time>
             
 
             
@@ -1830,7 +1659,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/PAT-B/" itemprop="url" rel="index"><span itemprop="name">PAT-B</span></a></span>
 
                 
                 
@@ -1866,19 +1695,166 @@
       
         
           
-            <p>#切换到root用户</p>
-<p>#添加Adobe Repository</p>
-<h2 id="Adobe-Repository-32-bit-x86"><a href="#Adobe-Repository-32-bit-x86" class="headerlink" title="Adobe Repository 32-bit x86"></a>Adobe Repository 32-bit x86</h2><p>rpm -ivh <a href="http://linuxdownload.adobe.com/adobe-release/adobe-release-i386-1.0-1.noarch.rpm" target="_blank" rel="noopener">http://linuxdownload.adobe.com/adobe-release/adobe-release-i386-1.0-1.noarch.rpm</a><br>rpm –import /etc/pki/rpm-gpg/RPM-GPG-KEY-adobe-linux</p>
-<h2 id="Adobe-Repository-64-bit-x86-64"><a href="#Adobe-Repository-64-bit-x86-64" class="headerlink" title="Adobe Repository 64-bit x86_64"></a>Adobe Repository 64-bit x86_64</h2><p>rpm -ivh <a href="http://linuxdownload.adobe.com/adobe-release/adobe-release-x86_64-1.0-1.noarch.rpm" target="_blank" rel="noopener">http://linuxdownload.adobe.com/adobe-release/adobe-release-x86_64-1.0-1.noarch.rpm</a><br>rpm –import /etc/pki/rpm-gpg/RPM-GPG-KEY-adobe-linux</p>
-<p>#安装Adobe Flash Player 28</p>
-<h1 id="Fedora-27-26-25-24"><a href="#Fedora-27-26-25-24" class="headerlink" title="Fedora 27/26/25/24"></a>Fedora 27/26/25/24</h1><p>dnf install flash-plugin alsa-plugins-pulseaudio libcurl</p>
-<h1 id="Fedora-23-22"><a href="#Fedora-23-22" class="headerlink" title="Fedora 23/22"></a>Fedora 23/22</h1><p>dnf install flash-plugin nspluginwrapper alsa-plugins-pulseaudio libcurl</p>
-<h1 id="CentOS-RHEL-7-4"><a href="#CentOS-RHEL-7-4" class="headerlink" title="CentOS/RHEL 7.4"></a>CentOS/RHEL 7.4</h1><p>yum install flash-plugin alsa-plugins-pulseaudio libcurl</p>
-<h1 id="CentOS-RHEL-6-9"><a href="#CentOS-RHEL-6-9" class="headerlink" title="CentOS/RHEL 6.9"></a>CentOS/RHEL 6.9</h1><p>yum install flash-plugin nspluginwrapper alsa-plugins-pulseaudio libcurl</p>
-<p>#测试下你的flash能否正常使用<br><a href="https://www.adobe.com/software/flash/about/" target="_blank" rel="noopener">Check is Adobe Flash Plugin Working</a></p>
-<hr>
-<p>转载自<a href="https://www.if-not-true-then-false.com/2010/install-adobe-flash-player-10-on-fedora-centos-red-hat-rhel/" target="_blank" rel="noopener">Adobe Flash Player 28 on Fedora 27/26, CentOS/RHEL 7.4/6.9</a></p>
+            <p>超简单题<br>//直接将各位分开，分别用for循环输出<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">    int num;</span><br><span class="line">    scanf(&quot;%d&quot;,&amp;num);</span><br><span class="line">    int bai=num/100;</span><br><span class="line">    int shi=num/10%10;</span><br><span class="line">    int ge = num%10;</span><br><span class="line">    for(int i=0;i&lt;bai;i++)</span><br><span class="line">        printf(&quot;B&quot;);</span><br><span class="line">    for(int i=0;i&lt;shi;i++)</span><br><span class="line">        printf(&quot;S&quot;);</span><br><span class="line">    for(int i=1;i&lt;=ge;i++)</span><br><span class="line">        printf(&quot;%d&quot;,i);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://zhujikuan.com/【PAT】B1005 继续(3n+1)猜想.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="万能的翔王大人">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="zhujikuan's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/【PAT】B1005 继续(3n+1)猜想.html" itemprop="url">
+                  【PAT】B1005 继续(3n+1)猜想
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-09-04 16:18:40 / Modified: 16:22:09" itemprop="dateCreated datePublished" datetime="2018-09-04T16:18:40+08:00">2018-09-04</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/PAT-B/" itemprop="url" rel="index"><span itemprop="name">PAT-B</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>没有婼姐写得好<br>将所有的输入放入mp，mp2<br>覆盖的数存入mp<br>一开始认为mp中只出现一次的元素就是，忘了可能只被覆盖一次的情况<br>所以添加了mp2保存输入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include&lt;algorithm&gt;</span><br><span class="line">#include&lt;map&gt;</span><br><span class="line">#include&lt;vector&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">int main() &#123;</span><br><span class="line">	int N; scanf(&quot;%d&quot;, &amp;N);</span><br><span class="line">	map&lt;int,int&gt; mp,mp2;</span><br><span class="line">	for (int i = 0; i&lt;N; i++) &#123;</span><br><span class="line">		int temp; scanf(&quot;%d&quot;, &amp;temp);</span><br><span class="line">		mp[temp]++; mp2[temp] = 1;</span><br><span class="line">		while (temp != 1) &#123;</span><br><span class="line">			if (temp % 2 == 0) &#123;</span><br><span class="line">				temp /= 2; mp[temp]++;</span><br><span class="line">			&#125;</span><br><span class="line">			else &#123;</span><br><span class="line">				temp = (temp * 3 + 1) / 2; mp[temp]++;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	vector&lt;int&gt; ve;</span><br><span class="line">	for (map&lt;int, int&gt;::iterator it = mp.begin(); it != mp.end(); it++) &#123;</span><br><span class="line">		if (it-&gt;second == 1&amp;&amp;mp2[it-&gt;first]==1) ve.push_back(it-&gt;first);</span><br><span class="line">	&#125;</span><br><span class="line">	sort(ve.begin(), ve.end());</span><br><span class="line">	for (int i = ve.size()-1; i&gt;=0; i--) &#123;</span><br><span class="line">		printf(&quot;%d&quot;, ve[i]);</span><br><span class="line">		if (i != 0) printf(&quot; &quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
           
         
       
@@ -1920,7 +1896,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 
@@ -1963,7 +1939,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">20</span>
+                    <span class="site-state-item-count">31</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>

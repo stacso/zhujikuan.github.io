@@ -108,25 +108,21 @@
 
 
 
-  <meta name="description" content="在输入时就进行结果的计算，忽略常数项，顺序输出 1234567891011121314151617181920212223#include&amp;lt;cstdio&amp;gt;#include&amp;lt;vector&amp;gt;using namespace std;struct duo&amp;#123;    int xishu,zhishu;&amp;#125;M;int main()&amp;#123;    vector&amp;lt;">
-<meta name="keywords" content="Linux,C语言,PAT">
-<meta property="og:type" content="article">
-<meta property="og:title" content="【PAT】B1010 一元多项式求导">
-<meta property="og:url" content="http://zhujikuan.com/【PAT】B1010 一元多项式求导.html">
+  <meta name="keywords" content="Linux,C语言,PAT">
+<meta property="og:type" content="website">
+<meta property="og:title" content="zhujikuan&#39;s blog">
+<meta property="og:url" content="http://zhujikuan.com/page/4/index.html">
 <meta property="og:site_name" content="zhujikuan&#39;s blog">
-<meta property="og:description" content="在输入时就进行结果的计算，忽略常数项，顺序输出 1234567891011121314151617181920212223#include&amp;lt;cstdio&amp;gt;#include&amp;lt;vector&amp;gt;using namespace std;struct duo&amp;#123;    int xishu,zhishu;&amp;#125;M;int main()&amp;#123;    vector&amp;lt;">
 <meta property="og:locale" content="zh-CM">
-<meta property="og:updated_time" content="2018-09-09T10:56:39.636Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【PAT】B1010 一元多项式求导">
-<meta name="twitter:description" content="在输入时就进行结果的计算，忽略常数项，顺序输出 1234567891011121314151617181920212223#include&amp;lt;cstdio&amp;gt;#include&amp;lt;vector&amp;gt;using namespace std;struct duo&amp;#123;    int xishu,zhishu;&amp;#125;M;int main()&amp;#123;    vector&amp;lt;">
+<meta name="twitter:title" content="zhujikuan&#39;s blog">
 
 
 
 
 
 
-  <link rel="canonical" href="http://zhujikuan.com/【PAT】B1010 一元多项式求导.html"/>
+  <link rel="canonical" href="http://zhujikuan.com/page/4/"/>
 
 
 
@@ -136,7 +132,7 @@
   };
 </script>
 
-  <title>【PAT】B1010 一元多项式求导 | zhujikuan's blog</title>
+  <title>zhujikuan's blog</title>
   
 
 
@@ -183,7 +179,8 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <div class="container sidebar-position-left 
+  page-home">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -300,9 +297,9 @@
           
           <div id="content" class="content">
             
-
-  <div id="posts" class="posts-expand">
+  <section id="posts" class="posts-expand">
     
+      
 
   
 
@@ -317,7 +314,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://zhujikuan.com/【PAT】B1010 一元多项式求导.html">
+    <link itemprop="mainEntityOfPage" href="http://zhujikuan.com/hello-world.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="万能的翔王大人">
@@ -334,7 +331,11 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">【PAT】B1010 一元多项式求导
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/hello-world.html" itemprop="url">
+                  fedora、centos、rhel安装Adobe Flash Player 28
+                </a>
               
             
           </h1>
@@ -359,7 +360,7 @@
                 
               
 
-              <time title="Created: 2018-09-09 16:54:40 / Modified: 18:56:39" itemprop="dateCreated datePublished" datetime="2018-09-09T16:54:40+08:00">2018-09-09</time>
+              <time title="Created: 2018-08-22 20:25:38 / Modified: 22:12:46" itemprop="dateCreated datePublished" datetime="2018-08-22T20:25:38+08:00">2018-08-22</time>
             
 
             
@@ -381,7 +382,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/PAT-B/" itemprop="url" rel="index"><span itemprop="name">PAT-B</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a></span>
 
                 
                 
@@ -415,8 +416,23 @@
       
 
       
-        <p>在输入时就进行结果的计算，忽略常数项，<br>顺序输出</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;cstdio&gt;</span><br><span class="line">#include&lt;vector&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">struct duo&#123;</span><br><span class="line">    int xishu,zhishu;</span><br><span class="line">&#125;M;</span><br><span class="line">int main()&#123;</span><br><span class="line">    vector&lt;duo&gt; arr;//结构体向量</span><br><span class="line">    while(scanf(&quot;%d %d&quot;,&amp;M.xishu,&amp;M.zhishu)!=EOF)&#123;</span><br><span class="line">        M.xishu*=M.zhishu;</span><br><span class="line">        M.zhishu--;</span><br><span class="line">        if(M.zhishu&gt;=0)</span><br><span class="line">            arr.push_back(M);</span><br><span class="line">    &#125;</span><br><span class="line">    if(arr.size()==0) printf(&quot;0 0&quot;);//如果结果为0</span><br><span class="line">    else&#123;</span><br><span class="line">        for(int i=0;i&lt;arr.size();i++)&#123;</span><br><span class="line">            if(i!=0)printf(&quot; &quot;);</span><br><span class="line">            printf(&quot;%d %d&quot;,arr[i].xishu,arr[i].zhishu);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        
+          
+            <p>#切换到root用户</p>
+<p>#添加Adobe Repository</p>
+<h2 id="Adobe-Repository-32-bit-x86"><a href="#Adobe-Repository-32-bit-x86" class="headerlink" title="Adobe Repository 32-bit x86"></a>Adobe Repository 32-bit x86</h2><p>rpm -ivh <a href="http://linuxdownload.adobe.com/adobe-release/adobe-release-i386-1.0-1.noarch.rpm" target="_blank" rel="noopener">http://linuxdownload.adobe.com/adobe-release/adobe-release-i386-1.0-1.noarch.rpm</a><br>rpm –import /etc/pki/rpm-gpg/RPM-GPG-KEY-adobe-linux</p>
+<h2 id="Adobe-Repository-64-bit-x86-64"><a href="#Adobe-Repository-64-bit-x86-64" class="headerlink" title="Adobe Repository 64-bit x86_64"></a>Adobe Repository 64-bit x86_64</h2><p>rpm -ivh <a href="http://linuxdownload.adobe.com/adobe-release/adobe-release-x86_64-1.0-1.noarch.rpm" target="_blank" rel="noopener">http://linuxdownload.adobe.com/adobe-release/adobe-release-x86_64-1.0-1.noarch.rpm</a><br>rpm –import /etc/pki/rpm-gpg/RPM-GPG-KEY-adobe-linux</p>
+<p>#安装Adobe Flash Player 28</p>
+<h1 id="Fedora-27-26-25-24"><a href="#Fedora-27-26-25-24" class="headerlink" title="Fedora 27/26/25/24"></a>Fedora 27/26/25/24</h1><p>dnf install flash-plugin alsa-plugins-pulseaudio libcurl</p>
+<h1 id="Fedora-23-22"><a href="#Fedora-23-22" class="headerlink" title="Fedora 23/22"></a>Fedora 23/22</h1><p>dnf install flash-plugin nspluginwrapper alsa-plugins-pulseaudio libcurl</p>
+<h1 id="CentOS-RHEL-7-4"><a href="#CentOS-RHEL-7-4" class="headerlink" title="CentOS/RHEL 7.4"></a>CentOS/RHEL 7.4</h1><p>yum install flash-plugin alsa-plugins-pulseaudio libcurl</p>
+<h1 id="CentOS-RHEL-6-9"><a href="#CentOS-RHEL-6-9" class="headerlink" title="CentOS/RHEL 6.9"></a>CentOS/RHEL 6.9</h1><p>yum install flash-plugin nspluginwrapper alsa-plugins-pulseaudio libcurl</p>
+<p>#测试下你的flash能否正常使用<br><a href="https://www.adobe.com/software/flash/about/" target="_blank" rel="noopener">Check is Adobe Flash Plugin Working</a></p>
+<hr>
+<p>转载自<a href="https://www.if-not-true-then-false.com/2010/install-adobe-flash-player-10-on-fedora-centos-red-hat-rhel/" target="_blank" rel="noopener">Adobe Flash Player 28 on Fedora 27/26, CentOS/RHEL 7.4/6.9</a></p>
+
+          
+        
       
     </div>
 
@@ -436,32 +452,12 @@
       
 
       
-      
+
       
 
       
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/【PAT】B1009 说反话.html" rel="next" title="【PAT】B1009 说反话">
-                <i class="fa fa-chevron-left"></i> 【PAT】B1009 说反话
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/【PAT】B1011 A+B 和 C.html" rel="prev" title="【PAT】B1011 A+B 和 C">
-                【PAT】B1011 A+B 和 C <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
       
-
-      
+        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -471,15 +467,18 @@
   </article>
 
 
-  </div>
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span>
+  </nav>
+
 
 
           </div>
           
-
-  
-
-
 
         </div>
         
@@ -704,10 +703,6 @@
   
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.0"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=6.4.0"></script>
-
-
 
   
 
