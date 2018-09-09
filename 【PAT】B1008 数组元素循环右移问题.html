@@ -116,13 +116,13 @@
 <meta property="og:site_name" content="zhujikuan&#39;s blog">
 <meta property="og:description" content="猥琐方法  直接分成两部分输出数组元素，注意空格的问题 123456789101112131415161718192021#include&amp;lt;stdio.h&amp;gt;int arr[101];void Priarr(int a,int b)&amp;#123;    if(a&amp;lt;=b)		for(int i=a;i&amp;lt;=b;i++)&amp;#123;			if(i!=a)printf(&amp;quot;">
 <meta property="og:locale" content="zh-CM">
-<meta property="og:image" content="https://files.cnblogs.com/files/hebust/1008.bmp">
-<meta property="og:image" content="https://files.cnblogs.com/files/hebust/10082.bmp">
-<meta property="og:updated_time" content="2018-09-09T09:16:52.719Z">
+<meta property="og:image" content="https://img-blog.csdn.net/20180909173322451?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2ExMzM1Mjg5Mjg2/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
+<meta property="og:image" content="https://img-blog.csdn.net/2018090917333928?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2ExMzM1Mjg5Mjg2/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
+<meta property="og:updated_time" content="2018-09-09T09:35:11.897Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【PAT】B1008 数组元素循环右移问题">
 <meta name="twitter:description" content="猥琐方法  直接分成两部分输出数组元素，注意空格的问题 123456789101112131415161718192021#include&amp;lt;stdio.h&amp;gt;int arr[101];void Priarr(int a,int b)&amp;#123;    if(a&amp;lt;=b)		for(int i=a;i&amp;lt;=b;i++)&amp;#123;			if(i!=a)printf(&amp;quot;">
-<meta name="twitter:image" content="https://files.cnblogs.com/files/hebust/1008.bmp">
+<meta name="twitter:image" content="https://img-blog.csdn.net/20180909173322451?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2ExMzM1Mjg5Mjg2/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
 
 
 
@@ -362,7 +362,7 @@
                 
               
 
-              <time title="Created: 2018-09-09 16:37:51 / Modified: 17:16:52" itemprop="dateCreated datePublished" datetime="2018-09-09T16:37:51+08:00">2018-09-09</time>
+              <time title="Created: 2018-09-09 16:37:51 / Modified: 17:35:11" itemprop="dateCreated datePublished" datetime="2018-09-09T16:37:51+08:00">2018-09-09</time>
             
 
             
@@ -419,10 +419,10 @@
 
       
         <ol>
-<li><p>猥琐方法<br> <img src="https://files.cnblogs.com/files/hebust/1008.bmp" alt="1008猥琐解法"><br> 直接分成两部分输出数组元素，注意空格的问题</p>
+<li><p>猥琐方法<br> <img src="https://img-blog.csdn.net/20180909173322451?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2ExMzM1Mjg5Mjg2/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="1008猥琐解法"><br> 直接分成两部分输出数组元素，注意空格的问题</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">int arr[101];</span><br><span class="line">void Priarr(int a,int b)&#123;</span><br><span class="line">    if(a&lt;=b)</span><br><span class="line">		for(int i=a;i&lt;=b;i++)&#123;</span><br><span class="line">			if(i!=a)printf(&quot; &quot;);</span><br><span class="line">			printf(&quot;%d&quot;,arr[i]);</span><br><span class="line">		&#125;</span><br><span class="line">&#125;</span><br><span class="line">int main()&#123;</span><br><span class="line">    int N,M;</span><br><span class="line">    scanf(&quot;%d%d&quot;,&amp;N,&amp;M);</span><br><span class="line">    M%=N;//化简移动次数</span><br><span class="line">    for(int i=1;i&lt;=N;i++)&#123;//从1开始存储</span><br><span class="line">        scanf(&quot;%d&quot;,&amp;arr[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    Priarr(N-M+1,N);</span><br><span class="line">    if(N-M+1&lt;N)printf(&quot; &quot;);</span><br><span class="line">    Priarr(1,N-M);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>光明正大的标准解法<br>整体逆置，两部分分别逆置<br><img src="https://files.cnblogs.com/files/hebust/10082.bmp" alt="1008"></p>
+<li><p>光明正大的标准解法<br>整体逆置，两部分分别逆置<br><img src="https://img-blog.csdn.net/2018090917333928?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2ExMzM1Mjg5Mjg2/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="1008"></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;algorithm&gt;</span><br><span class="line">#include &lt;vector&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">int main() &#123;</span><br><span class="line">    int N, M;</span><br><span class="line">    cin &gt;&gt; N &gt;&gt; M;</span><br><span class="line">    int a[N];</span><br><span class="line">    for (int i = 0; i &lt; N; i++)</span><br><span class="line">        scanf(&quot;%d&quot;,&amp;a[i]);</span><br><span class="line">    M %= N;</span><br><span class="line">    if (M != 0) &#123;</span><br><span class="line">        reverse(a, a+N);</span><br><span class="line">        reverse(a, a+M);</span><br><span class="line">        reverse(a+M, a+N);</span><br><span class="line">    &#125;</span><br><span class="line">    for (int i = 0; i &lt; N - 1; i++)</span><br><span class="line">        printf(&quot;%d &quot;,a[i]);</span><br><span class="line">    printf(&quot;%d&quot;,a[N-1]);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ol>
 
