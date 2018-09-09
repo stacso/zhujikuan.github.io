@@ -108,25 +108,25 @@
 
 
 
-  <meta name="description" content="简单题循环输入放入结构体数组，一个sort搞定 12345678910111213141516171819#include &amp;lt;stdio.h&amp;gt;#include&amp;lt;algorithm&amp;gt;using namespace std;struct str &amp;#123;	char name[12], stunum[12];	int score;&amp;#125;arr[100000];bool">
+  <meta name="description" content="用埃氏筛筛出素数表（节约时间）素数的筛选范围不能小了，一定要够大 12345678910111213141516171819202122#include&amp;lt;stdio.h&amp;gt;int main()&amp;#123;    int N,M;scanf(&amp;quot;%d %d&amp;quot;,&amp;amp;M,&amp;amp;N);    int pnum=0,num=0;    bool hashtable[10">
 <meta name="keywords" content="Linux,C语言,PAT">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【PAT】B1004 成绩排名">
-<meta property="og:url" content="http://zhujikuan.com/【PAT】B1004 成绩排名.html">
+<meta property="og:title" content="【PAT】B1013 数素数">
+<meta property="og:url" content="http://zhujikuan.com/【PAT】B1013 数素数.html">
 <meta property="og:site_name" content="zhujikuan&#39;s blog">
-<meta property="og:description" content="简单题循环输入放入结构体数组，一个sort搞定 12345678910111213141516171819#include &amp;lt;stdio.h&amp;gt;#include&amp;lt;algorithm&amp;gt;using namespace std;struct str &amp;#123;	char name[12], stunum[12];	int score;&amp;#125;arr[100000];bool">
+<meta property="og:description" content="用埃氏筛筛出素数表（节约时间）素数的筛选范围不能小了，一定要够大 12345678910111213141516171819202122#include&amp;lt;stdio.h&amp;gt;int main()&amp;#123;    int N,M;scanf(&amp;quot;%d %d&amp;quot;,&amp;amp;M,&amp;amp;N);    int pnum=0,num=0;    bool hashtable[10">
 <meta property="og:locale" content="zh-CM">
-<meta property="og:updated_time" content="2018-09-03T08:39:38.158Z">
+<meta property="og:updated_time" content="2018-09-09T11:07:33.067Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【PAT】B1004 成绩排名">
-<meta name="twitter:description" content="简单题循环输入放入结构体数组，一个sort搞定 12345678910111213141516171819#include &amp;lt;stdio.h&amp;gt;#include&amp;lt;algorithm&amp;gt;using namespace std;struct str &amp;#123;	char name[12], stunum[12];	int score;&amp;#125;arr[100000];bool">
+<meta name="twitter:title" content="【PAT】B1013 数素数">
+<meta name="twitter:description" content="用埃氏筛筛出素数表（节约时间）素数的筛选范围不能小了，一定要够大 12345678910111213141516171819202122#include&amp;lt;stdio.h&amp;gt;int main()&amp;#123;    int N,M;scanf(&amp;quot;%d %d&amp;quot;,&amp;amp;M,&amp;amp;N);    int pnum=0,num=0;    bool hashtable[10">
 
 
 
 
 
 
-  <link rel="canonical" href="http://zhujikuan.com/【PAT】B1004 成绩排名.html"/>
+  <link rel="canonical" href="http://zhujikuan.com/【PAT】B1013 数素数.html"/>
 
 
 
@@ -136,7 +136,7 @@
   };
 </script>
 
-  <title>【PAT】B1004 成绩排名 | zhujikuan's blog</title>
+  <title>【PAT】B1013 数素数 | zhujikuan's blog</title>
   
 
 
@@ -317,7 +317,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://zhujikuan.com/【PAT】B1004 成绩排名.html">
+    <link itemprop="mainEntityOfPage" href="http://zhujikuan.com/【PAT】B1013 数素数.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="万能的翔王大人">
@@ -334,7 +334,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">【PAT】B1004 成绩排名
+          <h1 class="post-title" itemprop="name headline">【PAT】B1013 数素数
               
             
           </h1>
@@ -359,7 +359,7 @@
                 
               
 
-              <time title="Created: 2018-09-03 16:38:03 / Modified: 16:39:38" itemprop="dateCreated datePublished" datetime="2018-09-03T16:38:03+08:00">2018-09-03</time>
+              <time title="Created: 2018-09-09 19:05:18 / Modified: 19:07:33" itemprop="dateCreated datePublished" datetime="2018-09-09T19:05:18+08:00">2018-09-09</time>
             
 
             
@@ -415,8 +415,8 @@
       
 
       
-        <p>简单题<br>循环输入放入结构体数组，一个sort搞定</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">#include&lt;algorithm&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">struct str &#123;</span><br><span class="line">	char name[12], stunum[12];</span><br><span class="line">	int score;</span><br><span class="line">&#125;arr[100000];</span><br><span class="line">bool cmp(str A, str B) &#123;</span><br><span class="line">	return A.score&gt;B.score;</span><br><span class="line">&#125;</span><br><span class="line">int main() &#123;</span><br><span class="line">	int N; scanf(&quot;%d&quot;, &amp;N);</span><br><span class="line">	for (int i = 0; i&lt;N; i++) &#123;</span><br><span class="line">		scanf(&quot;%s %s %d&quot;, arr[i].name, arr[i].stunum, &amp;arr[i].score);</span><br><span class="line">	&#125;</span><br><span class="line">	sort(arr, arr + N, cmp);</span><br><span class="line">	printf(&quot;%s %s\n%s %s&quot;, arr[0].name, arr[0].stunum, arr[N - 1].name, arr[N - 1].stunum);</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <p>用埃氏筛筛出素数表（节约时间）<br>素数的筛选范围不能小了，一定要够大</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">    int N,M;scanf(&quot;%d %d&quot;,&amp;M,&amp;N);</span><br><span class="line">    int pnum=0,num=0;</span><br><span class="line">    bool hashtable[1000000]=&#123;0&#125;;</span><br><span class="line">    for(int i=2;i&lt;1000000;i++)&#123;</span><br><span class="line">        if(hashtable[i]==false)&#123;//如果没有被筛去</span><br><span class="line">            pnum++;</span><br><span class="line">            if(pnum&gt;=M&amp;&amp;pnum&lt;=N)&#123;//空格，换行</span><br><span class="line">                num++;</span><br><span class="line">                if(num%10!=1)printf(&quot; &quot;);</span><br><span class="line">                printf(&quot;%d&quot;,i);</span><br><span class="line">                if(num%10==0)printf(&quot;\n&quot;);</span><br><span class="line">            &#125;</span><br><span class="line">            for(int j=i+i;j&lt;1000000;j+=i)&#123;</span><br><span class="line">                hashtable[j]=true;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -443,8 +443,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/【PAT】B1018 锤子剪刀布.html" rel="next" title="【PAT】B1018 锤子剪刀布">
-                <i class="fa fa-chevron-left"></i> 【PAT】B1018 锤子剪刀布
+              <a href="/【PAT】B1012 数字分类.html" rel="next" title="【PAT】B1012 数字分类">
+                <i class="fa fa-chevron-left"></i> 【PAT】B1012 数字分类
               </a>
             
           </div>
@@ -452,10 +452,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/【PAT】B1005 继续(3n+1)猜想.html" rel="prev" title="【PAT】B1005 继续(3n+1)猜想">
-                【PAT】B1005 继续(3n+1)猜想 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>

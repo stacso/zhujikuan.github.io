@@ -108,25 +108,25 @@
 
 
 
-  <meta name="description" content="直接分成两部分输出数组元素123456789101112131415161718192021#include&amp;lt;stdio.h&amp;gt;int arr[101];void Priarr(int a,int b)&amp;#123;    if(a&amp;lt;=b)		for(int i=a;i&amp;lt;=b;i++)&amp;#123;			if(i!=a)printf(&amp;quot; &amp;quot;);			print">
+  <meta name="description" content="在输入时直接分别将每个单词放入字符串，逆序输出字符串数组12345678910111213#include&amp;lt;stdio.h&amp;gt;int main()&amp;#123;    int num=0;    char ans[90][90];    while(scanf(&amp;quot;%s&amp;quot;,ans[num])!=EOF)        num++;    for(int i=num-1;i">
 <meta name="keywords" content="Linux,C语言,PAT">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【PAT】B1008 数组元素循环右移问题">
-<meta property="og:url" content="http://zhujikuan.com/【PAT】B - 副本.html">
+<meta property="og:title" content="【PAT】B1009 说反话">
+<meta property="og:url" content="http://zhujikuan.com/【PAT】B1009 说反话.html">
 <meta property="og:site_name" content="zhujikuan&#39;s blog">
-<meta property="og:description" content="直接分成两部分输出数组元素123456789101112131415161718192021#include&amp;lt;stdio.h&amp;gt;int arr[101];void Priarr(int a,int b)&amp;#123;    if(a&amp;lt;=b)		for(int i=a;i&amp;lt;=b;i++)&amp;#123;			if(i!=a)printf(&amp;quot; &amp;quot;);			print">
+<meta property="og:description" content="在输入时直接分别将每个单词放入字符串，逆序输出字符串数组12345678910111213#include&amp;lt;stdio.h&amp;gt;int main()&amp;#123;    int num=0;    char ans[90][90];    while(scanf(&amp;quot;%s&amp;quot;,ans[num])!=EOF)        num++;    for(int i=num-1;i">
 <meta property="og:locale" content="zh-CM">
-<meta property="og:updated_time" content="2018-09-09T08:54:40.042Z">
+<meta property="og:updated_time" content="2018-09-09T10:48:45.110Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【PAT】B1008 数组元素循环右移问题">
-<meta name="twitter:description" content="直接分成两部分输出数组元素123456789101112131415161718192021#include&amp;lt;stdio.h&amp;gt;int arr[101];void Priarr(int a,int b)&amp;#123;    if(a&amp;lt;=b)		for(int i=a;i&amp;lt;=b;i++)&amp;#123;			if(i!=a)printf(&amp;quot; &amp;quot;);			print">
+<meta name="twitter:title" content="【PAT】B1009 说反话">
+<meta name="twitter:description" content="在输入时直接分别将每个单词放入字符串，逆序输出字符串数组12345678910111213#include&amp;lt;stdio.h&amp;gt;int main()&amp;#123;    int num=0;    char ans[90][90];    while(scanf(&amp;quot;%s&amp;quot;,ans[num])!=EOF)        num++;    for(int i=num-1;i">
 
 
 
 
 
 
-  <link rel="canonical" href="http://zhujikuan.com/【PAT】B - 副本.html"/>
+  <link rel="canonical" href="http://zhujikuan.com/【PAT】B1009 说反话.html"/>
 
 
 
@@ -136,7 +136,7 @@
   };
 </script>
 
-  <title>【PAT】B1008 数组元素循环右移问题 | zhujikuan's blog</title>
+  <title>【PAT】B1009 说反话 | zhujikuan's blog</title>
   
 
 
@@ -317,7 +317,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://zhujikuan.com/【PAT】B - 副本.html">
+    <link itemprop="mainEntityOfPage" href="http://zhujikuan.com/【PAT】B1009 说反话.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="万能的翔王大人">
@@ -334,7 +334,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">【PAT】B1008 数组元素循环右移问题
+          <h1 class="post-title" itemprop="name headline">【PAT】B1009 说反话
               
             
           </h1>
@@ -359,9 +359,13 @@
                 
               
 
-              <time title="Created: 2018-09-09 16:54:40" itemprop="dateCreated datePublished" datetime="2018-09-09T16:54:40+08:00">2018-09-09</time>
+              <time title="Created: 2018-09-09 16:54:40 / Modified: 18:48:45" itemprop="dateCreated datePublished" datetime="2018-09-09T16:54:40+08:00">2018-09-09</time>
             
 
+            
+              
+
+              
             
           </span>
 
@@ -411,7 +415,7 @@
       
 
       
-        <p>直接分成两部分输出数组元素<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">int arr[101];</span><br><span class="line">void Priarr(int a,int b)&#123;</span><br><span class="line">    if(a&lt;=b)</span><br><span class="line">		for(int i=a;i&lt;=b;i++)&#123;</span><br><span class="line">			if(i!=a)printf(&quot; &quot;);</span><br><span class="line">			printf(&quot;%d&quot;,arr[i]);</span><br><span class="line">		&#125;</span><br><span class="line">&#125;</span><br><span class="line">int main()&#123;</span><br><span class="line">    int N,M;</span><br><span class="line">    scanf(&quot;%d%d&quot;,&amp;N,&amp;M);</span><br><span class="line">    M%=N;//化简移动次数</span><br><span class="line">    for(int i=1;i&lt;=N;i++)&#123;//从1开始存储</span><br><span class="line">        scanf(&quot;%d&quot;,&amp;arr[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    Priarr(N-M+1,N);</span><br><span class="line">    if(N-M+1&lt;N)printf(&quot; &quot;);</span><br><span class="line">    Priarr(1,N-M);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+        <p>在输入时直接分别将每个单词放入字符串，逆序输出字符串数组<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">    int num=0;</span><br><span class="line">    char ans[90][90];</span><br><span class="line">    while(scanf(&quot;%s&quot;,ans[num])!=EOF)</span><br><span class="line">        num++;</span><br><span class="line">    for(int i=num-1;i&gt;=0;i--)&#123;</span><br><span class="line">        printf(&quot;%s&quot;,ans[i]);</span><br><span class="line">        if(i&gt;0) printf(&quot; &quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -448,6 +452,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/【PAT】B1010 一元多项式求导.html" rel="prev" title="【PAT】B1010 一元多项式求导">
+                【PAT】B1010 一元多项式求导 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -508,7 +516,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">16</span>
+                    <span class="site-state-item-count">20</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
