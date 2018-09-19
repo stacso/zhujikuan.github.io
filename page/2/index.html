@@ -314,6 +314,164 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://zhujikuan.com/【PAT】B1020 月饼.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="万能的翔王大人">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="zhujikuan's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/【PAT】B1020 月饼.html" itemprop="url">
+                  【PAT】B1020 月饼
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-09-09 21:32:13 / Modified: 21:33:03" itemprop="dateCreated datePublished" datetime="2018-09-09T21:32:13+08:00">2018-09-09</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/PAT-B/" itemprop="url" rel="index"><span itemprop="name">PAT-B</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>超级简单题，注意浮点数的处理</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">#include&lt;algorithm&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">const int maxn = 1000;</span><br><span class="line">typedef struct yuebing &#123;</span><br><span class="line">	double cun;</span><br><span class="line">	double shouyi;</span><br><span class="line">	double danjian;</span><br><span class="line">&#125;yue;</span><br><span class="line">yue arr[maxn];</span><br><span class="line">bool cmp(yue a, yue b) &#123;</span><br><span class="line">	return a.danjian&gt;b.danjian;</span><br><span class="line">&#125;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	int N, D; double shoushou = 0;</span><br><span class="line">	scanf(&quot;%d%d&quot;, &amp;N, &amp;D);</span><br><span class="line">	//输入库存</span><br><span class="line">	for (int i = 0; i&lt;N; i++) &#123;</span><br><span class="line">		scanf(&quot;%lf&quot;, &amp;arr[i].cun);</span><br><span class="line">	&#125;</span><br><span class="line">	//输入收益，并计算单收益</span><br><span class="line">	for (int i = 0; i&lt;N; i++) &#123;</span><br><span class="line">		scanf(&quot;%lf&quot;, &amp;arr[i].shouyi);</span><br><span class="line">		arr[i].danjian = arr[i].shouyi / arr[i].cun;</span><br><span class="line">	&#125;</span><br><span class="line">	sort(arr, arr + N, cmp);//根据但收益排序</span><br><span class="line">	for (int i = 0; i&lt;N; i++) &#123;</span><br><span class="line">		if (arr[i].cun &gt;= D) &#123;</span><br><span class="line">			shoushou += arr[i].danjian*D;</span><br><span class="line">			break;</span><br><span class="line">		&#125;</span><br><span class="line">		if (arr[i].cun&lt;D)</span><br><span class="line">			shoushou += arr[i].shouyi;</span><br><span class="line">		D -= arr[i].cun;</span><br><span class="line">	&#125;</span><br><span class="line">	printf(&quot;%.2f&quot;, shoushou);</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://zhujikuan.com/【PAT】B1019 数字黑洞.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1726,170 +1884,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://zhujikuan.com/【PAT】B1008 数组元素循环右移问题.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="万能的翔王大人">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zhujikuan's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/【PAT】B1008 数组元素循环右移问题.html" itemprop="url">
-                  【PAT】B1008 数组元素循环右移问题
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2018-09-09 16:37:51 / Modified: 17:47:59" itemprop="dateCreated datePublished" datetime="2018-09-09T16:37:51+08:00">2018-09-09</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/PAT-B/" itemprop="url" rel="index"><span itemprop="name">PAT-B</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ol>
-<li><p>猥琐方法<br> <img src="https://www.zhujikuan.com/images/PATB/1008.png" alt="1008猥琐解法"><br> 直接分成两部分输出数组元素，注意空格的问题</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">int arr[101];</span><br><span class="line">void Priarr(int a,int b)&#123;</span><br><span class="line">    if(a&lt;=b)</span><br><span class="line">		for(int i=a;i&lt;=b;i++)&#123;</span><br><span class="line">			if(i!=a)printf(&quot; &quot;);</span><br><span class="line">			printf(&quot;%d&quot;,arr[i]);</span><br><span class="line">		&#125;</span><br><span class="line">&#125;</span><br><span class="line">int main()&#123;</span><br><span class="line">    int N,M;</span><br><span class="line">    scanf(&quot;%d%d&quot;,&amp;N,&amp;M);</span><br><span class="line">    M%=N;//化简移动次数</span><br><span class="line">    for(int i=1;i&lt;=N;i++)&#123;//从1开始存储</span><br><span class="line">        scanf(&quot;%d&quot;,&amp;arr[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    Priarr(N-M+1,N);</span><br><span class="line">    if(N-M+1&lt;N)printf(&quot; &quot;);</span><br><span class="line">    Priarr(1,N-M);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>光明正大的标准解法<br>整体逆置，两部分分别逆置<br><img src="https://www.zhujikuan.com/images/PATB/10082.png" alt="1008"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;algorithm&gt;</span><br><span class="line">#include &lt;vector&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">int main() &#123;</span><br><span class="line">    int N, M;</span><br><span class="line">    cin &gt;&gt; N &gt;&gt; M;</span><br><span class="line">    int a[N];</span><br><span class="line">    for (int i = 0; i &lt; N; i++)</span><br><span class="line">        scanf(&quot;%d&quot;,&amp;a[i]);</span><br><span class="line">    M %= N;</span><br><span class="line">    if (M != 0) &#123;</span><br><span class="line">        reverse(a, a+N);</span><br><span class="line">        reverse(a, a+M);</span><br><span class="line">        reverse(a+M, a+N);</span><br><span class="line">    &#125;</span><br><span class="line">    for (int i = 0; i &lt; N - 1; i++)</span><br><span class="line">        printf(&quot;%d &quot;,a[i]);</span><br><span class="line">    printf(&quot;%d&quot;,a[N-1]);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-</ol>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1937,7 +1931,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">34</span>
+                    <span class="site-state-item-count">35</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
